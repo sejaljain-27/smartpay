@@ -1,4 +1,3 @@
-// ...existing code...
 import pg from "pg";
 
 const { Pool } = pg;
@@ -9,17 +8,28 @@ const {
   DB_PORT,
   DB_USER,
   DB_PASSWORD,
-  DB_NAME
+  DB_NAME,
+  NODE_ENV
 } = process.env;
 
+// ✅ SSL only in production
+const sslConfig =
+  NODE_ENV === "production"
+    ? { rejectUnauthorized: false }
+    : false;
+
 const pool = DATABASE_URL
-  ? new Pool({ connectionString: DATABASE_URL })
+  ? new Pool({
+    connectionString: DATABASE_URL,
+    ssl: sslConfig
+  })
   : new Pool({
     host: DB_HOST,
     port: DB_PORT ? Number(DB_PORT) : undefined,
     user: DB_USER,
     password: DB_PASSWORD ? String(DB_PASSWORD) : undefined,
-    database: DB_NAME
+    database: DB_NAME,
+    ssl: sslConfig
   });
 
 pool.on("error", (err) => {
@@ -41,7 +51,6 @@ export async function initDb() {
     );
   `);
 
-  // Migration for existing tables
   await pool.query(`
     ALTER TABLE IF EXISTS users
     ADD COLUMN IF NOT EXISTS name TEXT,
@@ -77,7 +86,9 @@ export async function initDb() {
   await pool.query(`
     ALTER TABLE IF EXISTS transactions
     ADD COLUMN IF NOT EXISTS user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-    ADD COLUMN IF NOT EXISTS type TEXT DEFAULT 'debited';
+    ADD COLUMN IF NOT EXISTS type TEXT DEFAULT 'debited',
+    ADD COLUMN IF NOT EXISTS bank_name TEXT,
+    ADD COLUMN IF NOT EXISTS available_balance NUMERIC;
   `);
 
   await pool.query(`
@@ -92,7 +103,6 @@ export async function initDb() {
   await pool.query(`
     CREATE INDEX IF NOT EXISTS idx_goals_user_id ON goals(user_id);
   `);
-
 
   await pool.query(`
     CREATE TABLE IF NOT EXISTS user_cards (
@@ -128,33 +138,31 @@ export async function initDb() {
     );
   `);
 
-  // OFFERS TABLE (Restored)
   await pool.query(`
     CREATE TABLE IF NOT EXISTS offers(
-    id SERIAL PRIMARY KEY,
-    title TEXT NOT NULL,
-    description TEXT,
-    discount_percentage NUMERIC DEFAULT 0,
-    category TEXT,
-    merchant TEXT,
-    card_required TEXT,
-    min_spend NUMERIC DEFAULT 0,
-    active BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMPTZ DEFAULT NOW()
-  );
+      id SERIAL PRIMARY KEY,
+      title TEXT NOT NULL,
+      description TEXT,
+      discount_percentage NUMERIC DEFAULT 0,
+      category TEXT,
+      merchant TEXT,
+      card_required TEXT,
+      min_spend NUMERIC DEFAULT 0,
+      active BOOLEAN DEFAULT TRUE,
+      created_at TIMESTAMPTZ DEFAULT NOW()
+    );
   `);
 
-  // Seed sample offers if empty
   const offersCount = await pool.query("SELECT COUNT(*) FROM offers");
   if (parseInt(offersCount.rows[0].count) === 0) {
     await pool.query(`
-        INSERT INTO offers(title, description, discount_percentage, category, merchant, card_required, min_spend)
-  VALUES
-    ('HDFC Amazon Offer', '10% off on Amazon for HDFC cards', 10, 'shopping', 'amazon', 'HDFC', 1000),
-    ('Zomato Gold', 'Flat 50% off on dining', 50, 'dining', 'zomato', 'Any', 200),
-    ('Uber Weekly', '5% cashback on rides', 5, 'travel', 'uber', 'Titanium', 0),
-    ('Myntra Sale', '15% off using Axis Bank', 15, 'shopping', 'myntra', 'Axis', 1500);
-  `);
+      INSERT INTO offers(title, description, discount_percentage, category, merchant, card_required, min_spend)
+      VALUES
+        ('HDFC Amazon Offer', '10% off on Amazon for HDFC cards', 10, 'shopping', 'amazon', 'HDFC', 1000),
+        ('Zomato Gold', 'Flat 50% off on dining', 50, 'dining', 'zomato', 'Any', 200),
+        ('Uber Weekly', '5% cashback on rides', 5, 'travel', 'uber', 'Titanium', 0),
+        ('Myntra Sale', '15% off using Axis Bank', 15, 'shopping', 'myntra', 'Axis', 1500);
+    `);
     console.log("Seeded sample offers.");
   }
 }
