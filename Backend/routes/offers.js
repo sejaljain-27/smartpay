@@ -231,21 +231,44 @@ router.post("/use", authMiddleware, async (req, res) => {
         }
 
         // Insert into transactions table
+        // Production Fix: Explicitly normalize all inputs
+        const payload = {
+            user_id: userId,
+            amount: amountToStore,
+            text: txText,
+            category: decision === 'ai_accepted' ? 'Savings' : category,
+            type: type,
+            created_at: new Date(),
+            ignored_offer: ignored_offer || false,
+            missed_saving_amount: missed_saving_amount || 0,
+            recommended_card: recommended_card || null,
+            // Ensure card_name is passed or null
+            card_name: card_name || null,
+            bank_name: null,
+            available_balance: null
+        };
+
+        console.log("Recording Offer Transaction:", payload);
+
+        // Insert into transactions table
         const result = await pool.query(
             `INSERT INTO transactions 
-      (user_id, amount, text, category, type, created_at, ignored_offer, missed_saving_amount, recommended_card) 
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) 
-      RETURNING *`,
+            (user_id, amount, text, category, type, created_at, ignored_offer, missed_saving_amount, recommended_card, card_name, bank_name, available_balance) 
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) 
+            RETURNING *`,
             [
-                userId,
-                amountToStore,
-                txText,
-                decision === 'ai_accepted' ? 'Savings' : category, // Categorize as Savings if accepted
-                type,
-                new Date(),
-                ignored_offer || false,
-                missed_saving_amount || 0,
-                recommended_card || null
+                payload.user_id,
+                payload.amount,
+                payload.text,
+                payload.category,
+                payload.type,
+                payload.created_at,
+                payload.ignored_offer,
+                payload.missed_saving_amount,
+                payload.recommended_card,
+                payload.card_name,
+                payload.bank_name,
+                payload.available_balance
             ]
         );
 

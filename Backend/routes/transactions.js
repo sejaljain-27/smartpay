@@ -40,9 +40,44 @@ router.post("/", async (req, res) => {
     // - Use 'category' (potentially auto-detected) from req.body
     // - Hardcode 'type' to 'debited' as per instruction
     // - Add 'created_at' and use 'new Date()' for its value.
+    // Production Fix: Explicitly map all columns and normalize values
+    const payload = {
+      user_id: req.user.id,
+      amount: -Math.abs(Number(amount)),
+      text: text,
+      category: category,
+      type: 'debited',
+      created_at: new Date(),
+      // Explicitly set these to avoid undefined/null in production
+      ignored_offer: false,
+      missed_saving_amount: 0,
+      card_name: null,
+      recommended_card: null,
+      bank_name: null,
+      available_balance: null
+    };
+
+    console.log("Saving transaction (Manual):", payload);
+
     const result = await pool.query(
-      "INSERT INTO transactions (user_id, amount, text, category, type, created_at) VALUES ($1, $2, $3, $4, 'debited', $5) RETURNING *",
-      [req.user.id, -Math.abs(Number(amount)), text, category, new Date()]
+      `INSERT INTO transactions 
+      (user_id, amount, text, category, type, created_at, ignored_offer, missed_saving_amount, card_name, recommended_card, bank_name, available_balance) 
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) 
+      RETURNING *`,
+      [
+        payload.user_id,
+        payload.amount,
+        payload.text,
+        payload.category,
+        payload.type,
+        payload.created_at,
+        payload.ignored_offer,
+        payload.missed_saving_amount,
+        payload.card_name,
+        payload.recommended_card,
+        payload.bank_name,
+        payload.available_balance
+      ]
     );
 
     res.json({

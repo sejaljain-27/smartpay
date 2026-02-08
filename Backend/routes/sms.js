@@ -91,21 +91,45 @@ async function processSMS({ sms_body, user_id, overrides = {} }) {
     }
   }
 
+  // Production Fix: Explicitly normalize all inputs
+  const payload = {
+    user_id,
+    amount: finalAmount,
+    text: merchant !== "Unknown" ? merchant : sms_body.slice(0, 50),
+    type,
+    category,
+    bank_name: bankName || null,
+    available_balance: availableBalance || null,
+    created_at: new Date(),
+    // Default explicit values for missing columns
+    card_name: null,
+    ignored_offer: false,
+    missed_saving_amount: 0,
+    recommended_card: null
+  };
+
+  console.log("Saving SMS Transaction:", payload);
+
   // 7. Save to DB
   await pool.query(
     `
     INSERT INTO transactions
-    (user_id, amount, text, type, category, bank_name, available_balance, created_at)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, NOW())
+    (user_id, amount, text, type, category, bank_name, available_balance, created_at, card_name, ignored_offer, missed_saving_amount, recommended_card)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     `,
     [
-      user_id,
-      finalAmount,
-      merchant !== "Unknown" ? merchant : sms_body.slice(0, 50),
-      type,
-      category,
-      bankName,
-      availableBalance
+      payload.user_id,
+      payload.amount,
+      payload.text,
+      payload.type,
+      payload.category,
+      payload.bank_name,
+      payload.available_balance,
+      payload.created_at,
+      payload.card_name,
+      payload.ignored_offer,
+      payload.missed_saving_amount,
+      payload.recommended_card
     ]
   );
 

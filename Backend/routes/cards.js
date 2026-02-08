@@ -12,9 +12,21 @@ router.post("/", async (req, res) => {
     if (!card_name) {
       return res.status(400).json({ error: "card_name required" });
     }
+    const payload = {
+      user_id: req.user.id,
+      card_name,
+      bank,
+      card_type,
+      last_digits,
+      network,
+      created_at: new Date()
+    };
+
+    console.log("Adding Card:", payload);
+
     const result = await pool.query(
-      "INSERT INTO user_cards (user_id, card_name, bank, card_type, last_digits, network) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      [req.user.id, card_name, bank, card_type, last_digits, network]
+      "INSERT INTO user_cards (user_id, card_name, bank, card_type, last_digits, network, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+      [payload.user_id, payload.card_name, payload.bank, payload.card_type, payload.last_digits, payload.network, payload.created_at]
     );
     res.status(201).json({ card: result.rows[0] });
   } catch (err) {
