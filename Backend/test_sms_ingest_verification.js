@@ -26,9 +26,9 @@ async function testIngest() {
         console.log('Response:', JSON.stringify(data, null, 2));
 
         if (res.status === 200 && data.status === 'saved') {
-            console.log("✅ SMS Ingestion Test Passed");
+            console.log(" SMS Ingestion Test Passed");
         } else {
-            console.error("❌ SMS Ingestion Test Failed");
+            console.error("SMS Ingestion Test Failed");
         }
 
     } catch (err) {

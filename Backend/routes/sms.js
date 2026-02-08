@@ -127,7 +127,7 @@ async function processSMS({ sms_body, user_id, overrides = {} }) {
  * - application/json { amount, type, merchant, rawText, user_id, ... } (Structured)
  */
 router.post("/ingest", async (req, res) => {
-  console.log("🔥 /sms/ingest HIT");
+  console.log(" /sms/ingest HIT");
   console.log("Headers:", req.headers);
   console.log("Body:", req.body);
   try {

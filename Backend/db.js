@@ -12,7 +12,7 @@ const {
   NODE_ENV
 } = process.env;
 
-// ✅ SSL only in production
+// SSL only in production
 const sslConfig =
   NODE_ENV === "production"
     ? { rejectUnauthorized: false }
