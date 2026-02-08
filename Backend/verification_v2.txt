@@ -1,0 +1,6 @@
+Starting v2 test...
+User created and token generated
+Expense added
+Income added
+Savings: {"totalSavings":"200"}
+SUCCESS

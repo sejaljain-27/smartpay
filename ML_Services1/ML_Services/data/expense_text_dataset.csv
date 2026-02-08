@@ -1,0 +1,2201 @@
+text,category
+bank bus ticket debit,Transport
+txn fund transfer id,Transfer
+upi meesho online order id,Shopping
+debit wifi bill ref,Utilities
+card electricity bill payment payment,Utilities
+pos electricity bill payment txn,Utilities
+pos zomato food order debit,Food
+pos cashback credited id,Other
+upi uber ride debit,Transport
+pos atm wdl charge,Cash Withdrawal
+card atm wdl txn,Cash Withdrawal
+bank swiggy food order payment,Food
+card electricity bill payment id,Utilities
+pos cab booking charge ref,Transport
+payment bus ticket charge,Transport
+bank upi payment to contact payment,Transfer
+debit water bill paid payment,Utilities
+upi online shopping payment ref,Shopping
+bank wifi bill charge,Utilities
+upi cab booking charge payment,Transport
+card mobile recharge payment ref,Utilities
+bank upi transfer to friend payment,Transfer
+upi bus ticket id,Transport
+bank cashback credited payment,Other
+debit mobile recharge payment payment,Utilities
+payment fund transfer payment,Transfer
+card myntra fashion purchase charge,Shopping
+txn zomato food order ref,Food
+upi cashback credited ref,Other
+pos flipkart order ref,Shopping
+debit metro ticket payment charge,Transport
+card cash withdrawn from atm txn,Cash Withdrawal
+debit cash withdrawn from atm debit,Cash Withdrawal
+card upi transfer to friend ref,Transfer
+card interest credited txn,Other
+txn shopping mall purchase id,Shopping
+debit jio recharge debit,Utilities
+payment restaurant bill payment charge,Food
+card cashback credited charge,Other
+card uber ride debit,Transport
+debit salary credit debit,Other
+upi atm wdl debit,Cash Withdrawal
+upi amazon order debit,Shopping
+payment broadband payment txn,Utilities
+debit cash withdrawn from atm ref,Cash Withdrawal
+pos unknown transaction id,Other
+bank wifi bill ref,Utilities
+pos cashback credited ref,Other
+pos unknown transaction payment,Other
+card interest credited charge,Other
+upi salary credit id,Other
+debit neft transfer id,Transfer
+payment metro ticket payment txn,Transport
+txn cashback credited debit,Other
+pos water bill paid id,Utilities
+pos uber ride id,Transport
+bank atm withdrawal debit ref,Cash Withdrawal
+pos cash withdrawn from atm txn,Cash Withdrawal
+card mobile recharge payment txn,Utilities
+payment cashback credited payment,Other
+txn meesho online order debit,Shopping
+payment atm withdrawal debit txn,Cash Withdrawal
+payment bank transfer debit payment,Transfer
+pos dinner at restaurant ref,Food
+txn atm cash withdrawal charge,Cash Withdrawal
+bank auto rickshaw ride charge,Transport
+bank unknown transaction charge,Other
+upi swiggy food order id,Food
+bank cab booking charge payment,Transport
+card neft transfer txn,Transfer
+card taxi fare payment payment,Transport
+bank swiggy food order charge,Food
+debit interest credited charge,Other
+upi bus ticket debit,Transport
+debit reward points credit id,Other
+payment myntra fashion purchase payment,Shopping
+pos cafe bill id,Food
+txn gas bill transaction id,Utilities
+pos upi transfer to friend id,Transfer
+pos ola cab ride debit,Transport
+txn lunch payment ref,Food
+pos ajio clothing order id,Shopping
+bank atm cash withdrawal debit,Cash Withdrawal
+debit water bill paid txn,Utilities
+bank atm wdl charge,Cash Withdrawal
+upi food delivery charge ref,Food
+upi mobile recharge payment txn,Utilities
+payment meesho online order ref,Shopping
+debit atm withdrawal debit txn,Cash Withdrawal
+pos atm cash withdrawal txn,Cash Withdrawal
+card reward points credit id,Other
+bank swiggy food order debit,Food
+payment bank transfer debit charge,Transfer
+debit upi payment to contact payment,Transfer
+txn broadband payment payment,Utilities
+card interest credited txn,Other
+bank cashback credited debit,Other
+pos water bill paid payment,Utilities
+upi unknown transaction ref,Other
+bank unknown transaction payment,Other
+debit swiggy food order debit,Food
+card ola cab ride charge,Transport
+txn mobile recharge payment payment,Utilities
+txn upi transfer to friend txn,Transfer
+pos broadband payment ref,Utilities
+payment imps transfer txn,Transfer
+upi bank transfer debit charge,Transfer
+upi ajio clothing order payment,Shopping
+debit refund received txn,Other
+card salary credit charge,Other
+bank shopping mall purchase txn,Shopping
+bank cashback credited charge,Other
+bank gas bill transaction debit,Utilities
+card atm wdl payment,Cash Withdrawal
+txn reward points credit txn,Other
+txn cafe bill id,Food
+debit uber ride charge,Transport
+card amazon order charge,Shopping
+payment money sent to account id,Transfer
+debit atm wdl id,Cash Withdrawal
+txn auto rickshaw ride txn,Transport
+pos fund transfer ref,Transfer
+payment ajio clothing order debit,Shopping
+card broadband payment id,Utilities
+card zomato food order charge,Food
+debit flipkart order charge,Shopping
+txn uber ride ref,Transport
+txn atm withdrawal debit id,Cash Withdrawal
+pos fund transfer txn,Transfer
+payment gas bill transaction debit,Utilities
+bank cab booking charge charge,Transport
+pos lunch payment id,Food
+pos water bill paid ref,Utilities
+debit ola cab ride id,Transport
+debit fund transfer txn,Transfer
+debit cash withdrawn from atm payment,Cash Withdrawal
+upi salary credit ref,Other
+pos bus ticket ref,Transport
+upi imps transfer ref,Transfer
+txn money sent to account payment,Transfer
+payment auto rickshaw ride txn,Transport
+bank myntra fashion purchase id,Shopping
+txn food delivery charge id,Food
+debit salary credit charge,Other
+txn cashback credited ref,Other
+card cab booking charge charge,Transport
+payment metro ticket payment debit,Transport
+txn myntra fashion purchase id,Shopping
+txn amazon order txn,Shopping
+pos cash withdrawal atm ref,Cash Withdrawal
+pos myntra fashion purchase debit,Shopping
+upi myntra fashion purchase ref,Shopping
+bank atm txn debit,Cash Withdrawal
+payment cash withdrawal atm id,Cash Withdrawal
+pos reward points credit txn,Other
+debit shopping mall purchase payment,Shopping
+upi dinner at restaurant debit,Food
+pos zomato food order id,Food
+upi gas bill transaction txn,Utilities
+txn atm wdl id,Cash Withdrawal
+card uber ride debit,Transport
+pos uber ride charge,Transport
+payment atm wdl txn,Cash Withdrawal
+pos bank transfer debit charge,Transfer
+bank restaurant bill payment txn,Food
+txn electricity bill payment debit,Utilities
+txn cash withdrawal atm id,Cash Withdrawal
+pos ola cab ride ref,Transport
+txn water bill paid txn,Utilities
+bank atm wdl id,Cash Withdrawal
+bank shopping mall purchase ref,Shopping
+bank wifi bill charge,Utilities
+txn shopping mall purchase charge,Shopping
+pos zomato food order debit,Food
+upi taxi fare payment charge,Transport
+card uber ride id,Transport
+debit cab booking charge txn,Transport
+bank atm txn debit,Cash Withdrawal
+pos broadband payment id,Utilities
+txn mobile recharge payment txn,Utilities
+debit cash withdrawn from atm txn,Cash Withdrawal
+txn atm txn ref,Cash Withdrawal
+payment ola cab ride ref,Transport
+card bank transfer debit payment,Transfer
+pos taxi fare payment txn,Transport
+upi uber ride charge,Transport
+txn unknown transaction payment,Other
+pos flipkart order ref,Shopping
+debit metro ticket payment debit,Transport
+upi zomato food order charge,Food
+card imps transfer txn,Transfer
+upi interest credited id,Other
+upi neft transfer debit,Transfer
+debit upi payment to contact ref,Transfer
+txn dinner at restaurant charge,Food
+pos unknown transaction id,Other
+debit reward points credit debit,Other
+debit refund received txn,Other
+payment cafe bill txn,Food
+bank atm wdl txn,Cash Withdrawal
+payment cab booking charge txn,Transport
+upi water bill paid txn,Utilities
+upi zomato food order ref,Food
+pos water bill paid payment,Utilities
+payment cash withdrawal atm txn,Cash Withdrawal
+card reward points credit debit,Other
+bank cash withdrawal atm payment,Cash Withdrawal
+debit money sent to account txn,Transfer
+txn cash withdrawn from atm ref,Cash Withdrawal
+payment bank transfer debit charge,Transfer
+upi food delivery charge payment,Food
+debit taxi fare payment txn,Transport
+bank money sent to account ref,Transfer
+debit atm cash withdrawal ref,Cash Withdrawal
+card atm withdrawal debit id,Cash Withdrawal
+txn interest credited payment,Other
+pos myntra fashion purchase charge,Shopping
+pos electricity bill payment txn,Utilities
+upi swiggy food order payment,Food
+card cab booking charge id,Transport
+txn atm wdl id,Cash Withdrawal
+payment reward points credit charge,Other
+debit wifi bill txn,Utilities
+pos cashback credited ref,Other
+pos shopping mall purchase ref,Shopping
+pos interest credited debit,Other
+bank restaurant bill payment charge,Food
+txn neft transfer ref,Transfer
+payment flipkart order ref,Shopping
+bank swiggy food order id,Food
+pos bank transfer debit debit,Transfer
+card atm txn txn,Cash Withdrawal
+pos refund received charge,Other
+bank amazon order debit,Shopping
+bank flipkart order id,Shopping
+pos cash withdrawn from atm txn,Cash Withdrawal
+payment interest credited txn,Other
+upi online shopping payment id,Shopping
+pos cab booking charge charge,Transport
+upi reward points credit payment,Other
+txn water bill paid charge,Utilities
+pos money sent to account charge,Transfer
+txn electricity bill payment charge,Utilities
+txn jio recharge id,Utilities
+pos atm cash withdrawal id,Cash Withdrawal
+upi fund transfer ref,Transfer
+txn zomato food order charge,Food
+debit bus ticket payment,Transport
+payment auto rickshaw ride payment,Transport
+pos atm cash withdrawal charge,Cash Withdrawal
+pos amazon order ref,Shopping
+payment myntra fashion purchase payment,Shopping
+debit cafe bill payment,Food
+pos meesho online order charge,Shopping
+txn flipkart order ref,Shopping
+upi zomato food order txn,Food
+bank upi transfer to friend txn,Transfer
+card interest credited id,Other
+upi money sent to account txn,Transfer
+payment meesho online order debit,Shopping
+txn amazon order txn,Shopping
+card cash withdrawal atm id,Cash Withdrawal
+txn money sent to account payment,Transfer
+upi swiggy food order txn,Food
+txn upi transfer to friend charge,Transfer
+upi upi payment to contact charge,Transfer
+txn atm txn charge,Cash Withdrawal
+debit salary credit txn,Other
+upi myntra fashion purchase id,Shopping
+upi restaurant bill payment payment,Food
+card cashback credited debit,Other
+upi mobile recharge payment id,Utilities
+pos flipkart order ref,Shopping
+bank cafe bill id,Food
+card bus ticket id,Transport
+pos atm wdl charge,Cash Withdrawal
+upi cab booking charge txn,Transport
+payment taxi fare payment ref,Transport
+upi imps transfer txn,Transfer
+upi lunch payment debit,Food
+debit atm cash withdrawal charge,Cash Withdrawal
+bank refund received id,Other
+txn electricity bill payment payment,Utilities
+card salary credit txn,Other
+debit mobile recharge payment debit,Utilities
+upi taxi fare payment id,Transport
+payment restaurant bill payment ref,Food
+payment metro ticket payment id,Transport
+pos reward points credit txn,Other
+pos atm cash withdrawal payment,Cash Withdrawal
+payment taxi fare payment txn,Transport
+debit atm txn debit,Cash Withdrawal
+bank food delivery charge txn,Food
+txn swiggy food order id,Food
+bank swiggy food order txn,Food
+txn upi payment to contact ref,Transfer
+card imps transfer txn,Transfer
+debit atm withdrawal debit ref,Cash Withdrawal
+pos cash withdrawal atm debit,Cash Withdrawal
+txn auto rickshaw ride ref,Transport
+debit reward points credit payment,Other
+card refund received id,Other
+pos bank transfer debit id,Transfer
+debit ajio clothing order payment,Shopping
+debit water bill paid id,Utilities
+pos ajio clothing order ref,Shopping
+pos jio recharge charge,Utilities
+txn fund transfer txn,Transfer
+card ajio clothing order txn,Shopping
+debit uber ride ref,Transport
+txn atm txn charge,Cash Withdrawal
+upi metro ticket payment ref,Transport
+bank meesho online order ref,Shopping
+upi online shopping payment payment,Shopping
+debit metro ticket payment charge,Transport
+bank unknown transaction charge,Other
+txn cab booking charge txn,Transport
+txn taxi fare payment payment,Transport
+upi reward points credit charge,Other
+card unknown transaction txn,Other
+bank atm withdrawal debit payment,Cash Withdrawal
+upi money sent to account charge,Transfer
+debit cashback credited charge,Other
+card meesho online order id,Shopping
+pos cashback credited id,Other
+pos atm withdrawal debit txn,Cash Withdrawal
+debit atm txn payment,Cash Withdrawal
+card restaurant bill payment payment,Food
+txn cashback credited id,Other
+debit atm wdl ref,Cash Withdrawal
+bank water bill paid payment,Utilities
+pos cab booking charge charge,Transport
+debit ola cab ride ref,Transport
+bank swiggy food order payment,Food
+bank ola cab ride charge,Transport
+card bank transfer debit charge,Transfer
+payment food delivery charge charge,Food
+upi amazon order txn,Shopping
+card restaurant bill payment debit,Food
+pos swiggy food order ref,Food
+upi atm txn payment,Cash Withdrawal
+bank swiggy food order id,Food
+card cash withdrawal atm txn,Cash Withdrawal
+txn atm cash withdrawal charge,Cash Withdrawal
+bank zomato food order txn,Food
+debit cash withdrawal atm txn,Cash Withdrawal
+bank online shopping payment ref,Shopping
+upi fund transfer txn,Transfer
+debit mobile recharge payment ref,Utilities
+pos zomato food order txn,Food
+card water bill paid charge,Utilities
+card myntra fashion purchase debit,Shopping
+txn food delivery charge debit,Food
+card lunch payment txn,Food
+upi atm wdl debit,Cash Withdrawal
+bank jio recharge id,Utilities
+bank unknown transaction txn,Other
+card atm txn charge,Cash Withdrawal
+payment bus ticket debit,Transport
+txn atm cash withdrawal id,Cash Withdrawal
+bank gas bill transaction ref,Utilities
+pos ola cab ride debit,Transport
+debit myntra fashion purchase payment,Shopping
+card cash withdrawal atm payment,Cash Withdrawal
+pos bank transfer debit id,Transfer
+bank water bill paid payment,Utilities
+debit refund received ref,Other
+txn cash withdrawal atm id,Cash Withdrawal
+bank meesho online order ref,Shopping
+pos zomato food order charge,Food
+upi taxi fare payment txn,Transport
+debit zomato food order id,Food
+debit mobile recharge payment id,Utilities
+card mobile recharge payment payment,Utilities
+pos amazon order debit,Shopping
+payment upi transfer to friend payment,Transfer
+debit online shopping payment ref,Shopping
+bank atm wdl debit,Cash Withdrawal
+pos flipkart order id,Shopping
+txn broadband payment ref,Utilities
+card swiggy food order id,Food
+card zomato food order ref,Food
+payment taxi fare payment id,Transport
+txn restaurant bill payment txn,Food
+debit upi transfer to friend id,Transfer
+debit food delivery charge debit,Food
+upi mobile recharge payment id,Utilities
+card atm wdl charge,Cash Withdrawal
+pos upi payment to contact debit,Transfer
+card auto rickshaw ride id,Transport
+debit zomato food order payment,Food
+pos electricity bill payment ref,Utilities
+card bank transfer debit id,Transfer
+pos food delivery charge charge,Food
+debit metro ticket payment debit,Transport
+pos bus ticket debit,Transport
+card electricity bill payment id,Utilities
+bank swiggy food order debit,Food
+debit myntra fashion purchase payment,Shopping
+bank fund transfer id,Transfer
+debit imps transfer debit,Transfer
+card bank transfer debit ref,Transfer
+bank myntra fashion purchase id,Shopping
+bank atm wdl charge,Cash Withdrawal
+debit food delivery charge debit,Food
+card ajio clothing order payment,Shopping
+txn myntra fashion purchase txn,Shopping
+debit dinner at restaurant charge,Food
+bank cash withdrawn from atm txn,Cash Withdrawal
+payment atm withdrawal debit charge,Cash Withdrawal
+bank imps transfer charge,Transfer
+debit meesho online order id,Shopping
+pos uber ride charge,Transport
+upi reward points credit ref,Other
+txn metro ticket payment txn,Transport
+card food delivery charge payment,Food
+txn dinner at restaurant ref,Food
+card electricity bill payment ref,Utilities
+bank cafe bill payment,Food
+txn bus ticket charge,Transport
+payment ola cab ride txn,Transport
+debit flipkart order id,Shopping
+bank food delivery charge debit,Food
+upi wifi bill charge,Utilities
+pos electricity bill payment txn,Utilities
+txn shopping mall purchase payment,Shopping
+debit electricity bill payment ref,Utilities
+payment atm cash withdrawal ref,Cash Withdrawal
+pos cashback credited charge,Other
+txn mobile recharge payment txn,Utilities
+bank ola cab ride ref,Transport
+bank uber ride payment,Transport
+card food delivery charge debit,Food
+bank zomato food order debit,Food
+upi atm cash withdrawal ref,Cash Withdrawal
+bank ola cab ride ref,Transport
+bank meesho online order id,Shopping
+pos broadband payment ref,Utilities
+payment meesho online order payment,Shopping
+upi imps transfer debit,Transfer
+payment upi payment to contact debit,Transfer
+debit meesho online order txn,Shopping
+payment imps transfer txn,Transfer
+upi atm cash withdrawal txn,Cash Withdrawal
+card fund transfer debit,Transfer
+bank cash withdrawal atm ref,Cash Withdrawal
+payment flipkart order debit,Shopping
+debit restaurant bill payment txn,Food
+payment ola cab ride charge,Transport
+payment money sent to account charge,Transfer
+bank unknown transaction ref,Other
+txn salary credit debit,Other
+payment cashback credited payment,Other
+upi atm txn debit,Cash Withdrawal
+txn atm txn ref,Cash Withdrawal
+card jio recharge charge,Utilities
+bank cash withdrawal atm charge,Cash Withdrawal
+card upi payment to contact debit,Transfer
+upi refund received txn,Other
+upi zomato food order payment,Food
+debit broadband payment payment,Utilities
+bank gas bill transaction ref,Utilities
+upi reward points credit txn,Other
+txn meesho online order payment,Shopping
+pos restaurant bill payment id,Food
+payment electricity bill payment payment,Utilities
+pos atm wdl id,Cash Withdrawal
+bank cash withdrawal atm id,Cash Withdrawal
+upi meesho online order payment,Shopping
+bank lunch payment payment,Food
+bank bank transfer debit payment,Transfer
+txn cash withdrawn from atm payment,Cash Withdrawal
+pos upi payment to contact charge,Transfer
+debit swiggy food order txn,Food
+pos upi transfer to friend id,Transfer
+payment atm txn ref,Cash Withdrawal
+bank ola cab ride payment,Transport
+bank cashback credited txn,Other
+debit upi payment to contact debit,Transfer
+txn mobile recharge payment ref,Utilities
+card bank transfer debit id,Transfer
+card auto rickshaw ride ref,Transport
+pos broadband payment charge,Utilities
+pos mobile recharge payment debit,Utilities
+upi neft transfer txn,Transfer
+pos cafe bill id,Food
+card zomato food order ref,Food
+payment water bill paid payment,Utilities
+bank myntra fashion purchase ref,Shopping
+debit gas bill transaction txn,Utilities
+card metro ticket payment ref,Transport
+debit online shopping payment debit,Shopping
+debit taxi fare payment charge,Transport
+txn restaurant bill payment ref,Food
+pos myntra fashion purchase txn,Shopping
+bank atm cash withdrawal payment,Cash Withdrawal
+payment upi transfer to friend ref,Transfer
+txn food delivery charge ref,Food
+card wifi bill debit,Utilities
+payment water bill paid id,Utilities
+card ajio clothing order id,Shopping
+txn bus ticket ref,Transport
+txn dinner at restaurant charge,Food
+txn fund transfer payment,Transfer
+card upi transfer to friend id,Transfer
+debit ola cab ride id,Transport
+txn swiggy food order txn,Food
+payment metro ticket payment debit,Transport
+card bank transfer debit payment,Transfer
+debit atm wdl debit,Cash Withdrawal
+upi flipkart order id,Shopping
+pos food delivery charge txn,Food
+bank wifi bill txn,Utilities
+card zomato food order charge,Food
+txn mobile recharge payment id,Utilities
+debit swiggy food order payment,Food
+pos reward points credit debit,Other
+debit broadband payment charge,Utilities
+bank myntra fashion purchase ref,Shopping
+txn meesho online order debit,Shopping
+card atm txn ref,Cash Withdrawal
+debit water bill paid charge,Utilities
+card upi transfer to friend debit,Transfer
+upi auto rickshaw ride txn,Transport
+upi zomato food order ref,Food
+pos atm txn payment,Cash Withdrawal
+debit flipkart order charge,Shopping
+bank cash withdrawal atm txn,Cash Withdrawal
+card reward points credit charge,Other
+bank shopping mall purchase debit,Shopping
+card amazon order debit,Shopping
+payment cash withdrawn from atm payment,Cash Withdrawal
+payment atm withdrawal debit charge,Cash Withdrawal
+debit fund transfer payment,Transfer
+txn water bill paid ref,Utilities
+card cashback credited charge,Other
+bank cafe bill ref,Food
+card taxi fare payment payment,Transport
+payment bus ticket txn,Transport
+bank metro ticket payment charge,Transport
+card myntra fashion purchase ref,Shopping
+pos neft transfer txn,Transfer
+upi online shopping payment txn,Shopping
+debit atm txn id,Cash Withdrawal
+payment bank transfer debit charge,Transfer
+payment food delivery charge txn,Food
+txn wifi bill charge,Utilities
+txn flipkart order charge,Shopping
+txn uber ride ref,Transport
+bank dinner at restaurant payment,Food
+bank water bill paid payment,Utilities
+upi ola cab ride charge,Transport
+txn uber ride debit,Transport
+bank cafe bill ref,Food
+payment swiggy food order ref,Food
+txn money sent to account payment,Transfer
+bank metro ticket payment txn,Transport
+card zomato food order debit,Food
+pos atm txn charge,Cash Withdrawal
+txn atm cash withdrawal id,Cash Withdrawal
+bank cash withdrawal atm id,Cash Withdrawal
+pos gas bill transaction ref,Utilities
+txn myntra fashion purchase txn,Shopping
+card shopping mall purchase payment,Shopping
+debit dinner at restaurant debit,Food
+upi online shopping payment txn,Shopping
+bank restaurant bill payment id,Food
+txn dinner at restaurant txn,Food
+debit taxi fare payment id,Transport
+bank cash withdrawal atm txn,Cash Withdrawal
+bank uber ride id,Transport
+pos neft transfer txn,Transfer
+upi restaurant bill payment ref,Food
+card uber ride debit,Transport
+debit mobile recharge payment ref,Utilities
+pos meesho online order payment,Shopping
+txn online shopping payment txn,Shopping
+debit amazon order debit,Shopping
+payment dinner at restaurant debit,Food
+debit money sent to account txn,Transfer
+bank atm wdl id,Cash Withdrawal
+debit amazon order debit,Shopping
+card shopping mall purchase payment,Shopping
+txn mobile recharge payment ref,Utilities
+payment refund received id,Other
+debit atm wdl txn,Cash Withdrawal
+bank broadband payment txn,Utilities
+txn jio recharge debit,Utilities
+card food delivery charge payment,Food
+upi ajio clothing order payment,Shopping
+card salary credit debit,Other
+bank broadband payment ref,Utilities
+bank mobile recharge payment charge,Utilities
+card neft transfer id,Transfer
+bank cash withdrawal atm txn,Cash Withdrawal
+card cash withdrawal atm charge,Cash Withdrawal
+upi imps transfer id,Transfer
+txn upi transfer to friend charge,Transfer
+pos salary credit ref,Other
+pos interest credited debit,Other
+debit atm txn ref,Cash Withdrawal
+pos atm withdrawal debit txn,Cash Withdrawal
+debit restaurant bill payment txn,Food
+payment bus ticket txn,Transport
+txn atm wdl payment,Cash Withdrawal
+txn uber ride id,Transport
+payment zomato food order payment,Food
+debit refund received txn,Other
+txn auto rickshaw ride payment,Transport
+bank salary credit payment,Other
+upi amazon order payment,Shopping
+debit neft transfer charge,Transfer
+payment broadband payment txn,Utilities
+debit atm wdl ref,Cash Withdrawal
+pos unknown transaction id,Other
+card atm wdl ref,Cash Withdrawal
+card dinner at restaurant id,Food
+bank fund transfer charge,Transfer
+txn neft transfer charge,Transfer
+txn atm withdrawal debit debit,Cash Withdrawal
+debit upi payment to contact txn,Transfer
+upi cash withdrawn from atm txn,Cash Withdrawal
+txn cash withdrawn from atm charge,Cash Withdrawal
+pos zomato food order id,Food
+upi refund received id,Other
+pos cashback credited debit,Other
+card refund received payment,Other
+payment reward points credit charge,Other
+txn myntra fashion purchase ref,Shopping
+pos atm cash withdrawal debit,Cash Withdrawal
+txn atm withdrawal debit ref,Cash Withdrawal
+txn neft transfer ref,Transfer
+txn atm wdl payment,Cash Withdrawal
+card atm cash withdrawal payment,Cash Withdrawal
+txn taxi fare payment ref,Transport
+txn flipkart order charge,Shopping
+txn amazon order debit,Shopping
+upi flipkart order payment,Shopping
+bank bus ticket debit,Transport
+txn shopping mall purchase charge,Shopping
+upi upi payment to contact debit,Transfer
+pos swiggy food order id,Food
+card bank transfer debit id,Transfer
+debit broadband payment ref,Utilities
+txn atm withdrawal debit id,Cash Withdrawal
+txn bank transfer debit id,Transfer
+card upi payment to contact id,Transfer
+bank jio recharge ref,Utilities
+txn auto rickshaw ride id,Transport
+payment bank transfer debit payment,Transfer
+debit food delivery charge debit,Food
+pos shopping mall purchase id,Shopping
+payment unknown transaction charge,Other
+upi lunch payment debit,Food
+card restaurant bill payment charge,Food
+txn lunch payment payment,Food
+debit money sent to account txn,Transfer
+txn shopping mall purchase id,Shopping
+pos restaurant bill payment debit,Food
+debit dinner at restaurant debit,Food
+debit bank transfer debit payment,Transfer
+bank neft transfer charge,Transfer
+card ajio clothing order ref,Shopping
+upi lunch payment payment,Food
+txn fund transfer charge,Transfer
+card restaurant bill payment txn,Food
+bank interest credited txn,Other
+card neft transfer debit,Transfer
+card lunch payment debit,Food
+pos bank transfer debit debit,Transfer
+debit cash withdrawal atm payment,Cash Withdrawal
+pos reward points credit ref,Other
+pos upi payment to contact debit,Transfer
+payment electricity bill payment charge,Utilities
+upi refund received charge,Other
+card upi payment to contact payment,Transfer
+txn dinner at restaurant txn,Food
+txn bus ticket txn,Transport
+bank dinner at restaurant ref,Food
+debit food delivery charge txn,Food
+txn amazon order id,Shopping
+card online shopping payment charge,Shopping
+txn fund transfer debit,Transfer
+bank bank transfer debit charge,Transfer
+pos wifi bill txn,Utilities
+card reward points credit id,Other
+bank cash withdrawal atm ref,Cash Withdrawal
+debit atm cash withdrawal debit,Cash Withdrawal
+payment atm cash withdrawal id,Cash Withdrawal
+txn cafe bill txn,Food
+debit salary credit debit,Other
+bank restaurant bill payment debit,Food
+txn auto rickshaw ride txn,Transport
+card upi payment to contact charge,Transfer
+pos lunch payment charge,Food
+bank ola cab ride id,Transport
+card cash withdrawn from atm ref,Cash Withdrawal
+payment salary credit txn,Other
+debit cab booking charge charge,Transport
+card atm withdrawal debit id,Cash Withdrawal
+upi cafe bill txn,Food
+payment upi payment to contact id,Transfer
+payment cash withdrawal atm charge,Cash Withdrawal
+payment salary credit ref,Other
+card atm txn id,Cash Withdrawal
+bank online shopping payment charge,Shopping
+bank ajio clothing order ref,Shopping
+upi auto rickshaw ride ref,Transport
+payment shopping mall purchase debit,Shopping
+pos online shopping payment ref,Shopping
+bank salary credit txn,Other
+debit cashback credited id,Other
+txn bus ticket debit,Transport
+txn lunch payment ref,Food
+card shopping mall purchase id,Shopping
+card interest credited debit,Other
+bank flipkart order ref,Shopping
+pos atm txn debit,Cash Withdrawal
+payment flipkart order debit,Shopping
+payment atm cash withdrawal ref,Cash Withdrawal
+bank water bill paid ref,Utilities
+card cafe bill charge,Food
+debit refund received debit,Other
+pos ola cab ride ref,Transport
+pos reward points credit payment,Other
+bank dinner at restaurant ref,Food
+upi cash withdrawal atm id,Cash Withdrawal
+payment cashback credited charge,Other
+pos taxi fare payment charge,Transport
+txn zomato food order debit,Food
+pos ajio clothing order id,Shopping
+debit neft transfer debit,Transfer
+txn shopping mall purchase id,Shopping
+bank food delivery charge txn,Food
+txn jio recharge ref,Utilities
+txn mobile recharge payment payment,Utilities
+card upi payment to contact charge,Transfer
+card dinner at restaurant payment,Food
+pos dinner at restaurant charge,Food
+pos amazon order debit,Shopping
+debit meesho online order payment,Shopping
+txn reward points credit payment,Other
+pos money sent to account charge,Transfer
+payment ola cab ride debit,Transport
+upi lunch payment id,Food
+pos mobile recharge payment charge,Utilities
+upi lunch payment txn,Food
+upi salary credit payment,Other
+debit imps transfer payment,Transfer
+card meesho online order ref,Shopping
+card restaurant bill payment payment,Food
+payment cafe bill charge,Food
+upi salary credit payment,Other
+bank atm cash withdrawal debit,Cash Withdrawal
+pos bus ticket debit,Transport
+bank salary credit payment,Other
+debit jio recharge ref,Utilities
+bank amazon order debit,Shopping
+card cash withdrawal atm payment,Cash Withdrawal
+card reward points credit payment,Other
+bank swiggy food order ref,Food
+upi cash withdrawal atm id,Cash Withdrawal
+debit reward points credit payment,Other
+debit ajio clothing order charge,Shopping
+debit salary credit ref,Other
+pos broadband payment charge,Utilities
+txn fund transfer txn,Transfer
+bank electricity bill payment txn,Utilities
+bank flipkart order ref,Shopping
+card cashback credited charge,Other
+card cash withdrawal atm txn,Cash Withdrawal
+payment cafe bill ref,Food
+txn ola cab ride debit,Transport
+pos shopping mall purchase id,Shopping
+upi neft transfer id,Transfer
+pos jio recharge id,Utilities
+bank food delivery charge txn,Food
+txn cashback credited charge,Other
+bank upi payment to contact id,Transfer
+payment refund received charge,Other
+pos atm txn id,Cash Withdrawal
+payment broadband payment payment,Utilities
+payment meesho online order charge,Shopping
+payment bus ticket charge,Transport
+txn metro ticket payment id,Transport
+upi cab booking charge payment,Transport
+payment uber ride debit,Transport
+card refund received debit,Other
+upi electricity bill payment ref,Utilities
+debit bus ticket id,Transport
+debit cash withdrawn from atm txn,Cash Withdrawal
+bank imps transfer txn,Transfer
+card money sent to account charge,Transfer
+txn cash withdrawal atm txn,Cash Withdrawal
+upi atm withdrawal debit id,Cash Withdrawal
+upi bank transfer debit id,Transfer
+debit mobile recharge payment id,Utilities
+bank upi transfer to friend txn,Transfer
+upi reward points credit txn,Other
+bank refund received charge,Other
+debit mobile recharge payment id,Utilities
+card atm txn charge,Cash Withdrawal
+upi salary credit id,Other
+card auto rickshaw ride id,Transport
+txn amazon order debit,Shopping
+card ajio clothing order id,Shopping
+pos uber ride debit,Transport
+payment cash withdrawn from atm txn,Cash Withdrawal
+upi lunch payment debit,Food
+pos salary credit payment,Other
+bank upi payment to contact txn,Transfer
+pos metro ticket payment charge,Transport
+bank lunch payment ref,Food
+debit electricity bill payment charge,Utilities
+pos bus ticket ref,Transport
+bank zomato food order charge,Food
+debit cafe bill payment,Food
+upi mobile recharge payment payment,Utilities
+payment upi transfer to friend ref,Transfer
+bank neft transfer ref,Transfer
+txn atm txn txn,Cash Withdrawal
+bank ola cab ride id,Transport
+upi mobile recharge payment debit,Utilities
+txn salary credit charge,Other
+debit food delivery charge debit,Food
+card fund transfer debit,Transfer
+upi myntra fashion purchase charge,Shopping
+card salary credit payment,Other
+bank atm withdrawal debit payment,Cash Withdrawal
+txn cashback credited ref,Other
+upi meesho online order debit,Shopping
+upi atm withdrawal debit charge,Cash Withdrawal
+upi food delivery charge payment,Food
+payment salary credit payment,Other
+bank dinner at restaurant id,Food
+payment cafe bill txn,Food
+upi amazon order payment,Shopping
+payment meesho online order charge,Shopping
+txn flipkart order payment,Shopping
+debit flipkart order id,Shopping
+pos unknown transaction charge,Other
+debit flipkart order ref,Shopping
+payment bank transfer debit txn,Transfer
+upi cash withdrawn from atm debit,Cash Withdrawal
+txn cafe bill txn,Food
+txn atm withdrawal debit charge,Cash Withdrawal
+upi salary credit txn,Other
+card swiggy food order debit,Food
+upi myntra fashion purchase id,Shopping
+txn cash withdrawn from atm debit,Cash Withdrawal
+payment taxi fare payment payment,Transport
+upi unknown transaction id,Other
+bank restaurant bill payment payment,Food
+card upi payment to contact txn,Transfer
+card atm wdl txn,Cash Withdrawal
+debit lunch payment txn,Food
+payment dinner at restaurant charge,Food
+upi interest credited payment,Other
+card bank transfer debit payment,Transfer
+txn atm wdl txn,Cash Withdrawal
+card gas bill transaction debit,Utilities
+bank restaurant bill payment charge,Food
+txn ajio clothing order debit,Shopping
+payment dinner at restaurant ref,Food
+upi taxi fare payment ref,Transport
+txn unknown transaction id,Other
+debit cashback credited id,Other
+txn cashback credited charge,Other
+txn uber ride debit,Transport
+debit cash withdrawn from atm charge,Cash Withdrawal
+upi fund transfer debit,Transfer
+card auto rickshaw ride txn,Transport
+debit water bill paid debit,Utilities
+bank gas bill transaction id,Utilities
+bank ola cab ride debit,Transport
+card restaurant bill payment debit,Food
+payment swiggy food order id,Food
+pos salary credit id,Other
+txn reward points credit debit,Other
+card cafe bill debit,Food
+card atm withdrawal debit txn,Cash Withdrawal
+upi ajio clothing order payment,Shopping
+txn cafe bill id,Food
+card uber ride ref,Transport
+bank cafe bill payment,Food
+bank cash withdrawn from atm charge,Cash Withdrawal
+payment broadband payment debit,Utilities
+debit gas bill transaction debit,Utilities
+debit atm withdrawal debit payment,Cash Withdrawal
+bank upi transfer to friend ref,Transfer
+txn atm cash withdrawal txn,Cash Withdrawal
+payment wifi bill debit,Utilities
+pos atm cash withdrawal payment,Cash Withdrawal
+debit fund transfer txn,Transfer
+debit mobile recharge payment ref,Utilities
+txn water bill paid ref,Utilities
+card amazon order charge,Shopping
+bank atm cash withdrawal txn,Cash Withdrawal
+upi water bill paid charge,Utilities
+pos swiggy food order ref,Food
+upi atm wdl ref,Cash Withdrawal
+payment lunch payment ref,Food
+card zomato food order txn,Food
+upi ola cab ride txn,Transport
+bank zomato food order ref,Food
+payment reward points credit id,Other
+pos meesho online order charge,Shopping
+upi jio recharge ref,Utilities
+card cab booking charge txn,Transport
+debit metro ticket payment ref,Transport
+txn ajio clothing order txn,Shopping
+payment cab booking charge id,Transport
+txn online shopping payment ref,Shopping
+debit meesho online order charge,Shopping
+payment atm withdrawal debit debit,Cash Withdrawal
+payment upi payment to contact payment,Transfer
+card cash withdrawn from atm ref,Cash Withdrawal
+debit upi payment to contact ref,Transfer
+card shopping mall purchase ref,Shopping
+upi refund received payment,Other
+payment upi payment to contact debit,Transfer
+bank flipkart order id,Shopping
+bank atm txn payment,Cash Withdrawal
+debit online shopping payment debit,Shopping
+debit meesho online order payment,Shopping
+payment cashback credited debit,Other
+bank flipkart order txn,Shopping
+pos dinner at restaurant txn,Food
+payment ola cab ride ref,Transport
+pos cafe bill charge,Food
+debit cash withdrawal atm charge,Cash Withdrawal
+upi jio recharge payment,Utilities
+txn electricity bill payment ref,Utilities
+pos taxi fare payment ref,Transport
+debit wifi bill ref,Utilities
+upi unknown transaction payment,Other
+bank unknown transaction ref,Other
+upi auto rickshaw ride ref,Transport
+txn ola cab ride charge,Transport
+card upi payment to contact id,Transfer
+pos money sent to account payment,Transfer
+debit atm txn debit,Cash Withdrawal
+debit wifi bill id,Utilities
+txn meesho online order payment,Shopping
+card broadband payment id,Utilities
+debit auto rickshaw ride charge,Transport
+debit unknown transaction id,Other
+upi food delivery charge txn,Food
+debit dinner at restaurant charge,Food
+pos lunch payment ref,Food
+pos upi transfer to friend debit,Transfer
+upi gas bill transaction txn,Utilities
+payment meesho online order txn,Shopping
+bank jio recharge charge,Utilities
+payment atm wdl ref,Cash Withdrawal
+payment swiggy food order payment,Food
+payment refund received charge,Other
+debit upi transfer to friend payment,Transfer
+pos jio recharge id,Utilities
+bank water bill paid ref,Utilities
+pos swiggy food order ref,Food
+bank salary credit ref,Other
+pos interest credited id,Other
+debit money sent to account id,Transfer
+pos cafe bill txn,Food
+card myntra fashion purchase ref,Shopping
+debit neft transfer id,Transfer
+upi dinner at restaurant id,Food
+bank dinner at restaurant payment,Food
+upi cash withdrawal atm charge,Cash Withdrawal
+payment bus ticket ref,Transport
+pos atm withdrawal debit debit,Cash Withdrawal
+card taxi fare payment ref,Transport
+card bank transfer debit txn,Transfer
+card neft transfer debit,Transfer
+card atm txn txn,Cash Withdrawal
+txn flipkart order ref,Shopping
+payment dinner at restaurant debit,Food
+pos amazon order debit,Shopping
+upi interest credited ref,Other
+txn atm withdrawal debit ref,Cash Withdrawal
+payment gas bill transaction ref,Utilities
+txn ola cab ride id,Transport
+txn cash withdrawal atm debit,Cash Withdrawal
+card imps transfer id,Transfer
+txn atm cash withdrawal txn,Cash Withdrawal
+pos imps transfer payment,Transfer
+debit jio recharge ref,Utilities
+debit wifi bill charge,Utilities
+upi food delivery charge ref,Food
+payment neft transfer payment,Transfer
+payment broadband payment id,Utilities
+upi shopping mall purchase payment,Shopping
+bank atm txn ref,Cash Withdrawal
+upi cash withdrawn from atm payment,Cash Withdrawal
+txn unknown transaction txn,Other
+card upi payment to contact charge,Transfer
+card upi transfer to friend charge,Transfer
+payment cash withdrawn from atm ref,Cash Withdrawal
+txn cash withdrawal atm txn,Cash Withdrawal
+debit cab booking charge payment,Transport
+payment unknown transaction debit,Other
+pos atm wdl txn,Cash Withdrawal
+bank ajio clothing order debit,Shopping
+debit atm txn payment,Cash Withdrawal
+payment cash withdrawal atm debit,Cash Withdrawal
+debit amazon order payment,Shopping
+txn bank transfer debit ref,Transfer
+upi meesho online order charge,Shopping
+upi lunch payment payment,Food
+bank reward points credit txn,Other
+txn water bill paid id,Utilities
+payment mobile recharge payment payment,Utilities
+pos fund transfer debit,Transfer
+payment unknown transaction ref,Other
+txn gas bill transaction charge,Utilities
+upi swiggy food order charge,Food
+payment water bill paid payment,Utilities
+bank upi payment to contact ref,Transfer
+pos shopping mall purchase id,Shopping
+pos amazon order payment,Shopping
+upi salary credit payment,Other
+bank uber ride charge,Transport
+debit atm txn payment,Cash Withdrawal
+pos restaurant bill payment ref,Food
+upi food delivery charge payment,Food
+debit online shopping payment payment,Shopping
+txn reward points credit id,Other
+txn neft transfer debit,Transfer
+payment flipkart order txn,Shopping
+bank wifi bill txn,Utilities
+bank cab booking charge ref,Transport
+payment restaurant bill payment id,Food
+debit unknown transaction payment,Other
+pos auto rickshaw ride ref,Transport
+payment cash withdrawn from atm id,Cash Withdrawal
+card gas bill transaction ref,Utilities
+upi neft transfer ref,Transfer
+bank jio recharge id,Utilities
+payment neft transfer payment,Transfer
+upi lunch payment payment,Food
+txn restaurant bill payment txn,Food
+debit upi transfer to friend ref,Transfer
+debit cash withdrawn from atm payment,Cash Withdrawal
+upi cab booking charge payment,Transport
+debit wifi bill id,Utilities
+card salary credit debit,Other
+bank imps transfer id,Transfer
+debit reward points credit ref,Other
+card meesho online order ref,Shopping
+upi atm cash withdrawal id,Cash Withdrawal
+debit money sent to account payment,Transfer
+payment myntra fashion purchase txn,Shopping
+debit uber ride charge,Transport
+txn refund received debit,Other
+txn imps transfer txn,Transfer
+pos electricity bill payment id,Utilities
+upi dinner at restaurant ref,Food
+upi meesho online order ref,Shopping
+card cab booking charge payment,Transport
+bank cab booking charge debit,Transport
+debit fund transfer payment,Transfer
+payment fund transfer id,Transfer
+debit restaurant bill payment payment,Food
+debit ajio clothing order id,Shopping
+pos imps transfer payment,Transfer
+bank atm cash withdrawal charge,Cash Withdrawal
+bank zomato food order txn,Food
+txn cafe bill charge,Food
+payment money sent to account id,Transfer
+upi reward points credit payment,Other
+upi upi transfer to friend id,Transfer
+payment broadband payment charge,Utilities
+bank zomato food order txn,Food
+bank uber ride txn,Transport
+txn zomato food order payment,Food
+txn ajio clothing order debit,Shopping
+bank uber ride charge,Transport
+bank metro ticket payment charge,Transport
+payment fund transfer payment,Transfer
+bank bank transfer debit ref,Transfer
+card lunch payment txn,Food
+debit swiggy food order payment,Food
+bank cash withdrawn from atm charge,Cash Withdrawal
+bank wifi bill payment,Utilities
+card ajio clothing order debit,Shopping
+upi gas bill transaction debit,Utilities
+txn online shopping payment charge,Shopping
+bank interest credited id,Other
+bank online shopping payment payment,Shopping
+card broadband payment debit,Utilities
+debit refund received debit,Other
+txn upi payment to contact debit,Transfer
+debit taxi fare payment payment,Transport
+pos gas bill transaction txn,Utilities
+card money sent to account debit,Transfer
+payment refund received payment,Other
+debit cash withdrawal atm txn,Cash Withdrawal
+debit food delivery charge id,Food
+card water bill paid debit,Utilities
+pos refund received id,Other
+upi flipkart order ref,Shopping
+upi jio recharge debit,Utilities
+card reward points credit ref,Other
+debit neft transfer debit,Transfer
+pos cash withdrawn from atm txn,Cash Withdrawal
+pos unknown transaction charge,Other
+payment restaurant bill payment ref,Food
+txn zomato food order ref,Food
+pos restaurant bill payment debit,Food
+card money sent to account debit,Transfer
+card fund transfer ref,Transfer
+debit atm withdrawal debit debit,Cash Withdrawal
+debit bank transfer debit txn,Transfer
+txn neft transfer payment,Transfer
+pos swiggy food order debit,Food
+card cafe bill id,Food
+txn reward points credit payment,Other
+payment swiggy food order txn,Food
+debit jio recharge payment,Utilities
+payment unknown transaction id,Other
+card amazon order ref,Shopping
+txn uber ride debit,Transport
+bank amazon order txn,Shopping
+debit imps transfer charge,Transfer
+pos reward points credit id,Other
+pos atm wdl charge,Cash Withdrawal
+upi lunch payment debit,Food
+card uber ride id,Transport
+txn lunch payment id,Food
+txn metro ticket payment payment,Transport
+pos taxi fare payment txn,Transport
+bank cab booking charge charge,Transport
+bank zomato food order id,Food
+pos broadband payment debit,Utilities
+upi money sent to account debit,Transfer
+bank auto rickshaw ride payment,Transport
+payment upi transfer to friend charge,Transfer
+card upi payment to contact txn,Transfer
+debit flipkart order ref,Shopping
+bank upi transfer to friend debit,Transfer
+pos jio recharge payment,Utilities
+txn atm wdl debit,Cash Withdrawal
+bank unknown transaction payment,Other
+payment myntra fashion purchase ref,Shopping
+txn cafe bill payment,Food
+pos gas bill transaction txn,Utilities
+upi upi payment to contact ref,Transfer
+pos atm cash withdrawal payment,Cash Withdrawal
+payment auto rickshaw ride txn,Transport
+debit imps transfer id,Transfer
+payment metro ticket payment txn,Transport
+payment upi payment to contact ref,Transfer
+payment zomato food order debit,Food
+pos meesho online order payment,Shopping
+pos zomato food order ref,Food
+txn gas bill transaction payment,Utilities
+debit cab booking charge charge,Transport
+txn upi transfer to friend debit,Transfer
+txn gas bill transaction charge,Utilities
+txn restaurant bill payment ref,Food
+upi cashback credited charge,Other
+card electricity bill payment txn,Utilities
+bank neft transfer ref,Transfer
+card wifi bill txn,Utilities
+card refund received payment,Other
+card gas bill transaction ref,Utilities
+upi cash withdrawal atm debit,Cash Withdrawal
+debit wifi bill charge,Utilities
+pos taxi fare payment payment,Transport
+debit atm txn ref,Cash Withdrawal
+payment bank transfer debit payment,Transfer
+debit amazon order charge,Shopping
+payment cash withdrawn from atm ref,Cash Withdrawal
+bank shopping mall purchase payment,Shopping
+debit reward points credit txn,Other
+pos salary credit payment,Other
+upi atm withdrawal debit txn,Cash Withdrawal
+upi reward points credit payment,Other
+card ajio clothing order debit,Shopping
+pos broadband payment txn,Utilities
+pos flipkart order id,Shopping
+payment bank transfer debit charge,Transfer
+debit electricity bill payment debit,Utilities
+debit atm wdl charge,Cash Withdrawal
+card atm wdl txn,Cash Withdrawal
+pos dinner at restaurant debit,Food
+card dinner at restaurant id,Food
+payment ajio clothing order charge,Shopping
+payment refund received id,Other
+bank broadband payment txn,Utilities
+txn auto rickshaw ride txn,Transport
+payment atm cash withdrawal charge,Cash Withdrawal
+card bank transfer debit payment,Transfer
+upi reward points credit id,Other
+card electricity bill payment payment,Utilities
+upi flipkart order payment,Shopping
+upi cab booking charge debit,Transport
+upi reward points credit debit,Other
+card bus ticket id,Transport
+upi restaurant bill payment ref,Food
+payment cashback credited charge,Other
+txn interest credited ref,Other
+payment flipkart order charge,Shopping
+debit cashback credited charge,Other
+txn bus ticket payment,Transport
+pos metro ticket payment payment,Transport
+txn cash withdrawn from atm charge,Cash Withdrawal
+pos dinner at restaurant payment,Food
+txn unknown transaction id,Other
+debit dinner at restaurant ref,Food
+debit taxi fare payment debit,Transport
+card atm wdl id,Cash Withdrawal
+bank metro ticket payment debit,Transport
+txn jio recharge ref,Utilities
+txn broadband payment payment,Utilities
+payment jio recharge payment,Utilities
+pos bank transfer debit charge,Transfer
+txn myntra fashion purchase ref,Shopping
+payment electricity bill payment txn,Utilities
+upi reward points credit payment,Other
+bank money sent to account txn,Transfer
+debit money sent to account charge,Transfer
+txn amazon order payment,Shopping
+payment upi transfer to friend txn,Transfer
+pos cash withdrawal atm debit,Cash Withdrawal
+card myntra fashion purchase txn,Shopping
+card gas bill transaction txn,Utilities
+upi cash withdrawal atm debit,Cash Withdrawal
+pos ajio clothing order charge,Shopping
+card atm txn txn,Cash Withdrawal
+pos ajio clothing order ref,Shopping
+txn cab booking charge debit,Transport
+debit metro ticket payment txn,Transport
+debit food delivery charge debit,Food
+pos broadband payment payment,Utilities
+pos lunch payment debit,Food
+payment upi payment to contact id,Transfer
+upi imps transfer ref,Transfer
+txn dinner at restaurant ref,Food
+upi flipkart order debit,Shopping
+upi uber ride id,Transport
+payment swiggy food order charge,Food
+upi interest credited payment,Other
+card food delivery charge txn,Food
+pos flipkart order debit,Shopping
+txn atm withdrawal debit ref,Cash Withdrawal
+card meesho online order id,Shopping
+card electricity bill payment txn,Utilities
+txn salary credit txn,Other
+pos bank transfer debit txn,Transfer
+txn ola cab ride id,Transport
+debit atm txn charge,Cash Withdrawal
+upi shopping mall purchase txn,Shopping
+debit restaurant bill payment payment,Food
+upi unknown transaction id,Other
+card ola cab ride debit,Transport
+upi unknown transaction payment,Other
+bank money sent to account debit,Transfer
+pos mobile recharge payment id,Utilities
+txn myntra fashion purchase txn,Shopping
+upi upi payment to contact debit,Transfer
+bank atm wdl debit,Cash Withdrawal
+txn cashback credited ref,Other
+txn myntra fashion purchase charge,Shopping
+txn salary credit debit,Other
+upi fund transfer payment,Transfer
+payment cafe bill debit,Food
+debit electricity bill payment id,Utilities
+txn zomato food order txn,Food
+card auto rickshaw ride charge,Transport
+txn fund transfer charge,Transfer
+payment bus ticket txn,Transport
+card metro ticket payment id,Transport
+upi auto rickshaw ride ref,Transport
+debit salary credit txn,Other
+txn amazon order id,Shopping
+debit broadband payment charge,Utilities
+payment cash withdrawn from atm txn,Cash Withdrawal
+payment broadband payment payment,Utilities
+payment cafe bill debit,Food
+payment upi transfer to friend txn,Transfer
+debit myntra fashion purchase txn,Shopping
+txn atm cash withdrawal id,Cash Withdrawal
+payment uber ride charge,Transport
+bank lunch payment payment,Food
+bank taxi fare payment charge,Transport
+upi imps transfer txn,Transfer
+upi money sent to account charge,Transfer
+debit ajio clothing order charge,Shopping
+upi ola cab ride txn,Transport
+txn food delivery charge debit,Food
+bank reward points credit ref,Other
+pos refund received txn,Other
+debit online shopping payment id,Shopping
+pos flipkart order txn,Shopping
+payment atm withdrawal debit ref,Cash Withdrawal
+txn metro ticket payment charge,Transport
+txn salary credit id,Other
+txn online shopping payment charge,Shopping
+debit cash withdrawn from atm ref,Cash Withdrawal
+txn myntra fashion purchase ref,Shopping
+bank restaurant bill payment charge,Food
+pos cafe bill payment,Food
+pos uber ride payment,Transport
+upi myntra fashion purchase txn,Shopping
+payment electricity bill payment txn,Utilities
+payment swiggy food order payment,Food
+pos meesho online order txn,Shopping
+bank upi payment to contact txn,Transfer
+pos atm withdrawal debit payment,Cash Withdrawal
+payment water bill paid charge,Utilities
+card upi payment to contact debit,Transfer
+txn bus ticket id,Transport
+pos atm cash withdrawal ref,Cash Withdrawal
+payment atm wdl debit,Cash Withdrawal
+payment atm wdl ref,Cash Withdrawal
+bank cash withdrawal atm charge,Cash Withdrawal
+bank cash withdrawn from atm payment,Cash Withdrawal
+upi atm withdrawal debit charge,Cash Withdrawal
+card interest credited payment,Other
+txn water bill paid debit,Utilities
+upi food delivery charge ref,Food
+pos neft transfer charge,Transfer
+pos amazon order txn,Shopping
+txn dinner at restaurant id,Food
+txn broadband payment payment,Utilities
+bank swiggy food order debit,Food
+card shopping mall purchase txn,Shopping
+txn wifi bill debit,Utilities
+payment uber ride payment,Transport
+bank food delivery charge charge,Food
+bank atm cash withdrawal charge,Cash Withdrawal
+upi taxi fare payment ref,Transport
+bank jio recharge id,Utilities
+txn ajio clothing order charge,Shopping
+pos salary credit payment,Other
+card money sent to account id,Transfer
+bank broadband payment payment,Utilities
+pos dinner at restaurant payment,Food
+card jio recharge ref,Utilities
+pos wifi bill payment,Utilities
+debit atm txn id,Cash Withdrawal
+pos mobile recharge payment charge,Utilities
+debit zomato food order id,Food
+upi online shopping payment charge,Shopping
+upi dinner at restaurant txn,Food
+debit atm withdrawal debit debit,Cash Withdrawal
+upi uber ride txn,Transport
+payment unknown transaction ref,Other
+upi salary credit txn,Other
+upi online shopping payment payment,Shopping
+card taxi fare payment debit,Transport
+bank imps transfer debit,Transfer
+upi uber ride charge,Transport
+bank restaurant bill payment ref,Food
+pos refund received txn,Other
+payment broadband payment debit,Utilities
+bank lunch payment ref,Food
+bank food delivery charge payment,Food
+payment zomato food order charge,Food
+payment salary credit charge,Other
+pos cashback credited charge,Other
+upi mobile recharge payment charge,Utilities
+bank cash withdrawn from atm ref,Cash Withdrawal
+upi cashback credited txn,Other
+bank electricity bill payment ref,Utilities
+upi zomato food order payment,Food
+upi electricity bill payment id,Utilities
+upi atm wdl txn,Cash Withdrawal
+pos uber ride id,Transport
+debit online shopping payment charge,Shopping
+upi meesho online order id,Shopping
+payment shopping mall purchase payment,Shopping
+payment restaurant bill payment id,Food
+upi cafe bill id,Food
+txn cash withdrawal atm payment,Cash Withdrawal
+bank gas bill transaction id,Utilities
+txn food delivery charge charge,Food
+card jio recharge charge,Utilities
+debit jio recharge id,Utilities
+card zomato food order ref,Food
+debit dinner at restaurant charge,Food
+bank dinner at restaurant debit,Food
+payment online shopping payment ref,Shopping
+upi food delivery charge id,Food
+txn restaurant bill payment payment,Food
+txn money sent to account ref,Transfer
+txn swiggy food order id,Food
+debit money sent to account id,Transfer
+debit lunch payment payment,Food
+debit ola cab ride txn,Transport
+txn water bill paid debit,Utilities
+pos jio recharge txn,Utilities
+bank flipkart order ref,Shopping
+debit dinner at restaurant charge,Food
+payment atm cash withdrawal ref,Cash Withdrawal
+pos myntra fashion purchase ref,Shopping
+card water bill paid id,Utilities
+payment electricity bill payment ref,Utilities
+upi unknown transaction debit,Other
+payment metro ticket payment charge,Transport
+bank salary credit ref,Other
+upi meesho online order ref,Shopping
+pos auto rickshaw ride ref,Transport
+payment lunch payment payment,Food
+pos flipkart order txn,Shopping
+debit fund transfer ref,Transfer
+txn cab booking charge id,Transport
+card ola cab ride id,Transport
+card refund received debit,Other
+payment flipkart order debit,Shopping
+txn bus ticket debit,Transport
+pos refund received txn,Other
+bank online shopping payment charge,Shopping
+bank cashback credited ref,Other
+card imps transfer id,Transfer
+pos wifi bill id,Utilities
+debit auto rickshaw ride txn,Transport
+txn shopping mall purchase payment,Shopping
+txn salary credit id,Other
+txn meesho online order debit,Shopping
+pos jio recharge charge,Utilities
+payment bus ticket payment,Transport
+debit neft transfer debit,Transfer
+txn flipkart order payment,Shopping
+debit myntra fashion purchase txn,Shopping
+bank reward points credit txn,Other
+upi metro ticket payment id,Transport
+debit cash withdrawal atm payment,Cash Withdrawal
+payment uber ride txn,Transport
+upi ajio clothing order payment,Shopping
+bank atm withdrawal debit id,Cash Withdrawal
+card imps transfer id,Transfer
+bank myntra fashion purchase id,Shopping
+pos taxi fare payment id,Transport
+card upi transfer to friend txn,Transfer
+txn uber ride id,Transport
+txn neft transfer txn,Transfer
+upi ajio clothing order txn,Shopping
+bank shopping mall purchase txn,Shopping
+upi unknown transaction debit,Other
+upi upi transfer to friend ref,Transfer
+payment upi transfer to friend payment,Transfer
+debit restaurant bill payment txn,Food
+pos zomato food order debit,Food
+txn jio recharge payment,Utilities
+payment gas bill transaction payment,Utilities
+bank food delivery charge ref,Food
+debit meesho online order charge,Shopping
+debit bank transfer debit ref,Transfer
+debit interest credited ref,Other
+pos auto rickshaw ride payment,Transport
+upi cash withdrawn from atm charge,Cash Withdrawal
+bank swiggy food order id,Food
+bank reward points credit txn,Other
+pos atm wdl payment,Cash Withdrawal
+upi imps transfer txn,Transfer
+bank bus ticket payment,Transport
+debit atm cash withdrawal charge,Cash Withdrawal
+debit auto rickshaw ride debit,Transport
+upi lunch payment id,Food
+debit cash withdrawal atm debit,Cash Withdrawal
+txn shopping mall purchase charge,Shopping
+card unknown transaction debit,Other
+txn lunch payment ref,Food
+card cab booking charge payment,Transport
+upi neft transfer ref,Transfer
+upi upi payment to contact charge,Transfer
+bank gas bill transaction txn,Utilities
+payment electricity bill payment debit,Utilities
+upi upi payment to contact payment,Transfer
+debit cashback credited ref,Other
+bank meesho online order debit,Shopping
+upi lunch payment txn,Food
+debit flipkart order charge,Shopping
+card food delivery charge id,Food
+card myntra fashion purchase debit,Shopping
+payment lunch payment txn,Food
+txn cashback credited id,Other
+txn mobile recharge payment ref,Utilities
+debit metro ticket payment txn,Transport
+upi money sent to account ref,Transfer
+payment ajio clothing order id,Shopping
+card fund transfer id,Transfer
+debit bus ticket ref,Transport
+debit dinner at restaurant ref,Food
+debit cafe bill txn,Food
+payment cafe bill payment,Food
+pos uber ride debit,Transport
+debit gas bill transaction payment,Utilities
+card zomato food order ref,Food
+card imps transfer debit,Transfer
+pos upi payment to contact debit,Transfer
+debit atm wdl debit,Cash Withdrawal
+txn interest credited ref,Other
+payment cab booking charge debit,Transport
+upi salary credit charge,Other
+debit dinner at restaurant debit,Food
+upi refund received charge,Other
+card restaurant bill payment ref,Food
+upi refund received charge,Other
+upi auto rickshaw ride charge,Transport
+txn gas bill transaction charge,Utilities
+card atm cash withdrawal payment,Cash Withdrawal
+debit interest credited txn,Other
+txn upi transfer to friend id,Transfer
+txn food delivery charge payment,Food
+txn imps transfer charge,Transfer
+debit bus ticket txn,Transport
+payment auto rickshaw ride id,Transport
+pos shopping mall purchase id,Shopping
+pos cash withdrawn from atm charge,Cash Withdrawal
+payment reward points credit ref,Other
+card auto rickshaw ride debit,Transport
+bank zomato food order id,Food
+debit wifi bill charge,Utilities
+bank neft transfer id,Transfer
+txn meesho online order ref,Shopping
+bank meesho online order ref,Shopping
+pos water bill paid ref,Utilities
+card ajio clothing order debit,Shopping
+upi upi payment to contact txn,Transfer
+debit money sent to account debit,Transfer
+upi myntra fashion purchase charge,Shopping
+pos swiggy food order ref,Food
+upi upi transfer to friend debit,Transfer
+upi dinner at restaurant ref,Food
+bank meesho online order id,Shopping
+debit cafe bill txn,Food
+payment broadband payment payment,Utilities
+upi uber ride id,Transport
+bank unknown transaction charge,Other
+pos unknown transaction id,Other
+bank atm withdrawal debit id,Cash Withdrawal
+upi gas bill transaction txn,Utilities
+txn dinner at restaurant txn,Food
+bank wifi bill payment,Utilities
+upi mobile recharge payment charge,Utilities
+debit auto rickshaw ride txn,Transport
+txn electricity bill payment payment,Utilities
+debit uber ride charge,Transport
+pos metro ticket payment payment,Transport
+upi cash withdrawal atm debit,Cash Withdrawal
+txn lunch payment ref,Food
+payment uber ride charge,Transport
+bank zomato food order id,Food
+debit gas bill transaction payment,Utilities
+pos uber ride txn,Transport
+txn atm cash withdrawal charge,Cash Withdrawal
+pos upi payment to contact id,Transfer
+debit jio recharge ref,Utilities
+txn myntra fashion purchase debit,Shopping
+pos food delivery charge ref,Food
+txn refund received txn,Other
+txn cash withdrawal atm charge,Cash Withdrawal
+payment online shopping payment ref,Shopping
+txn ola cab ride id,Transport
+debit jio recharge id,Utilities
+bank metro ticket payment payment,Transport
+txn shopping mall purchase debit,Shopping
+pos swiggy food order charge,Food
+upi upi payment to contact charge,Transfer
+txn restaurant bill payment id,Food
+pos taxi fare payment txn,Transport
+upi bank transfer debit debit,Transfer
+upi taxi fare payment ref,Transport
+upi ola cab ride txn,Transport
+debit bus ticket debit,Transport
+upi swiggy food order txn,Food
+payment fund transfer charge,Transfer
+card shopping mall purchase txn,Shopping
+card restaurant bill payment debit,Food
+debit money sent to account txn,Transfer
+txn amazon order charge,Shopping
+upi myntra fashion purchase ref,Shopping
+card mobile recharge payment debit,Utilities
+debit bus ticket txn,Transport
+pos atm wdl id,Cash Withdrawal
+pos bank transfer debit txn,Transfer
+pos lunch payment payment,Food
+payment flipkart order charge,Shopping
+debit atm wdl txn,Cash Withdrawal
+bank metro ticket payment payment,Transport
+card myntra fashion purchase id,Shopping
+bank swiggy food order id,Food
+bank imps transfer id,Transfer
+card money sent to account txn,Transfer
+card water bill paid payment,Utilities
+debit neft transfer charge,Transfer
+card meesho online order ref,Shopping
+bank meesho online order txn,Shopping
+payment reward points credit txn,Other
+card upi payment to contact payment,Transfer
+debit zomato food order debit,Food
+debit auto rickshaw ride id,Transport
+pos atm cash withdrawal payment,Cash Withdrawal
+payment upi payment to contact txn,Transfer
+debit metro ticket payment txn,Transport
+txn money sent to account ref,Transfer
+pos swiggy food order txn,Food
+debit upi transfer to friend debit,Transfer
+upi money sent to account ref,Transfer
+debit gas bill transaction ref,Utilities
+bank cafe bill ref,Food
+upi shopping mall purchase payment,Shopping
+txn myntra fashion purchase debit,Shopping
+payment atm wdl id,Cash Withdrawal
+bank meesho online order charge,Shopping
+bank refund received id,Other
+debit atm cash withdrawal debit,Cash Withdrawal
+bank fund transfer txn,Transfer
+bank shopping mall purchase debit,Shopping
+pos atm wdl payment,Cash Withdrawal
+txn restaurant bill payment id,Food
+debit cab booking charge payment,Transport
+card cash withdrawn from atm txn,Cash Withdrawal
+pos bus ticket id,Transport
+txn flipkart order ref,Shopping
+upi cashback credited ref,Other
+txn online shopping payment id,Shopping
+payment cab booking charge id,Transport
+txn restaurant bill payment ref,Food
+debit ajio clothing order txn,Shopping
+payment salary credit id,Other
+pos bus ticket payment,Transport
+txn meesho online order txn,Shopping
+payment fund transfer txn,Transfer
+payment atm txn txn,Cash Withdrawal
+debit cafe bill txn,Food
+payment atm cash withdrawal payment,Cash Withdrawal
+payment metro ticket payment debit,Transport
+upi cash withdrawal atm charge,Cash Withdrawal
+bank lunch payment ref,Food
+upi fund transfer id,Transfer
+txn atm wdl id,Cash Withdrawal
+upi cash withdrawal atm payment,Cash Withdrawal
+payment interest credited debit,Other
+payment zomato food order payment,Food
+bank fund transfer txn,Transfer
+card atm wdl debit,Cash Withdrawal
+card cashback credited id,Other
+pos uber ride payment,Transport
+payment swiggy food order ref,Food
+upi dinner at restaurant payment,Food
+card imps transfer ref,Transfer
+txn amazon order charge,Shopping
+card imps transfer ref,Transfer
+upi dinner at restaurant debit,Food
+bank salary credit ref,Other
+txn auto rickshaw ride id,Transport
+card bus ticket debit,Transport
+txn fund transfer payment,Transfer
+payment ola cab ride txn,Transport
+upi taxi fare payment debit,Transport
+txn auto rickshaw ride id,Transport
+pos salary credit debit,Other
+payment ajio clothing order ref,Shopping
+upi cash withdrawal atm payment,Cash Withdrawal
+debit gas bill transaction charge,Utilities
+card fund transfer charge,Transfer
+txn bank transfer debit ref,Transfer
+debit amazon order txn,Shopping
+pos atm txn txn,Cash Withdrawal
+debit atm cash withdrawal txn,Cash Withdrawal
+card neft transfer ref,Transfer
+payment uber ride payment,Transport
+debit cash withdrawn from atm ref,Cash Withdrawal
+card cash withdrawal atm ref,Cash Withdrawal
+payment amazon order txn,Shopping
+pos cash withdrawal atm debit,Cash Withdrawal
+debit imps transfer ref,Transfer
+bank zomato food order id,Food
+upi auto rickshaw ride txn,Transport
+txn taxi fare payment ref,Transport
+card unknown transaction payment,Other
+txn swiggy food order txn,Food
+bank cafe bill ref,Food
+pos refund received charge,Other
+card cash withdrawal atm txn,Cash Withdrawal
+pos imps transfer id,Transfer
+debit bank transfer debit charge,Transfer
+upi reward points credit ref,Other
+card cashback credited charge,Other
+upi ola cab ride txn,Transport
+card cash withdrawal atm txn,Cash Withdrawal
+debit atm withdrawal debit charge,Cash Withdrawal
+bank unknown transaction txn,Other
+pos metro ticket payment ref,Transport
+txn cash withdrawn from atm id,Cash Withdrawal
+debit food delivery charge ref,Food
+upi atm wdl charge,Cash Withdrawal
+upi cash withdrawn from atm id,Cash Withdrawal
+upi upi payment to contact txn,Transfer
+bank cashback credited txn,Other
+txn atm cash withdrawal payment,Cash Withdrawal
+debit atm withdrawal debit id,Cash Withdrawal
+bank interest credited charge,Other
+bank restaurant bill payment txn,Food
+pos atm txn ref,Cash Withdrawal
+payment cafe bill charge,Food
+bank auto rickshaw ride ref,Transport
+bank amazon order ref,Shopping
+bank swiggy food order payment,Food
+card atm txn payment,Cash Withdrawal
+txn food delivery charge payment,Food
+bank wifi bill charge,Utilities
+bank salary credit id,Other
+pos restaurant bill payment id,Food
+txn cafe bill debit,Food
+pos cash withdrawal atm txn,Cash Withdrawal
+txn atm cash withdrawal debit,Cash Withdrawal
+bank bus ticket debit,Transport
+debit jio recharge id,Utilities
+upi atm withdrawal debit id,Cash Withdrawal
+upi meesho online order payment,Shopping
+payment salary credit txn,Other
+bank flipkart order payment,Shopping
+card wifi bill ref,Utilities
+card flipkart order payment,Shopping
+bank cash withdrawn from atm charge,Cash Withdrawal
+pos ola cab ride ref,Transport
+upi uber ride txn,Transport
+pos salary credit id,Other
+pos salary credit ref,Other
+card uber ride txn,Transport
+debit bank transfer debit charge,Transfer
+upi wifi bill debit,Utilities
+payment neft transfer debit,Transfer
+txn dinner at restaurant id,Food
+txn cafe bill ref,Food
+bank meesho online order ref,Shopping
+payment reward points credit id,Other
+payment neft transfer payment,Transfer
+pos meesho online order ref,Shopping
+card bank transfer debit payment,Transfer
+txn zomato food order payment,Food
+txn water bill paid txn,Utilities
+upi atm withdrawal debit ref,Cash Withdrawal
+pos neft transfer payment,Transfer
+upi cashback credited payment,Other
+debit uber ride charge,Transport
+debit ajio clothing order charge,Shopping
+bank flipkart order charge,Shopping
+txn online shopping payment charge,Shopping
+bank fund transfer id,Transfer
+payment refund received id,Other
+payment jio recharge payment,Utilities
+txn lunch payment debit,Food
+payment auto rickshaw ride ref,Transport
+debit imps transfer id,Transfer
+payment flipkart order ref,Shopping
+payment flipkart order txn,Shopping
+debit unknown transaction id,Other
+upi fund transfer debit,Transfer
+payment atm withdrawal debit debit,Cash Withdrawal
+debit imps transfer id,Transfer
+pos money sent to account id,Transfer
+card metro ticket payment payment,Transport
+bank interest credited debit,Other
+bank flipkart order ref,Shopping
+debit cash withdrawn from atm id,Cash Withdrawal
+debit gas bill transaction charge,Utilities
+txn flipkart order debit,Shopping
+debit gas bill transaction id,Utilities
+payment mobile recharge payment id,Utilities
+pos bank transfer debit ref,Transfer
+card electricity bill payment ref,Utilities
+upi uber ride charge,Transport
+pos imps transfer txn,Transfer
+debit unknown transaction ref,Other
+txn jio recharge charge,Utilities
+upi jio recharge payment,Utilities
+txn gas bill transaction ref,Utilities
+bank reward points credit debit,Other
+bank lunch payment debit,Food
+card bank transfer debit debit,Transfer
+debit reward points credit txn,Other
+pos atm withdrawal debit payment,Cash Withdrawal
+upi cashback credited txn,Other
+txn mobile recharge payment charge,Utilities
+bank amazon order id,Shopping
+card food delivery charge debit,Food
+payment online shopping payment id,Shopping
+debit neft transfer payment,Transfer
+payment electricity bill payment id,Utilities
+card restaurant bill payment payment,Food
+debit taxi fare payment txn,Transport
+txn dinner at restaurant ref,Food
+debit ola cab ride payment,Transport
+bank taxi fare payment payment,Transport
+debit flipkart order charge,Shopping
+txn taxi fare payment ref,Transport
+card flipkart order payment,Shopping
+debit upi payment to contact payment,Transfer
+bank cash withdrawn from atm debit,Cash Withdrawal
+card auto rickshaw ride payment,Transport
+debit dinner at restaurant txn,Food
+card neft transfer id,Transfer
+card lunch payment id,Food
+card reward points credit debit,Other
+pos myntra fashion purchase debit,Shopping
+debit taxi fare payment id,Transport
+payment neft transfer payment,Transfer
+payment water bill paid charge,Utilities
+card cash withdrawn from atm debit,Cash Withdrawal
+pos neft transfer charge,Transfer
+pos gas bill transaction id,Utilities
+txn metro ticket payment id,Transport
+debit bank transfer debit debit,Transfer
+debit electricity bill payment debit,Utilities
+txn myntra fashion purchase payment,Shopping
+txn electricity bill payment txn,Utilities
+pos neft transfer charge,Transfer
+bank food delivery charge txn,Food
+bank fund transfer txn,Transfer
+payment gas bill transaction id,Utilities
+txn food delivery charge debit,Food
+debit atm withdrawal debit debit,Cash Withdrawal
+debit imps transfer id,Transfer
+debit flipkart order ref,Shopping
+debit food delivery charge debit,Food
+card auto rickshaw ride charge,Transport
+bank uber ride payment,Transport
+card ola cab ride payment,Transport
+debit electricity bill payment txn,Utilities
+card imps transfer txn,Transfer
+card atm wdl id,Cash Withdrawal
+pos atm txn ref,Cash Withdrawal
+debit jio recharge payment,Utilities
+txn neft transfer debit,Transfer
+debit atm txn payment,Cash Withdrawal
+upi cash withdrawal atm debit,Cash Withdrawal
+payment salary credit debit,Other
+txn mobile recharge payment debit,Utilities
+payment bus ticket debit,Transport
+debit amazon order txn,Shopping
+bank unknown transaction ref,Other
+txn imps transfer payment,Transfer
+upi zomato food order payment,Food
+payment cash withdrawal atm debit,Cash Withdrawal
+card imps transfer payment,Transfer
+payment cab booking charge charge,Transport
+card shopping mall purchase txn,Shopping
+pos bus ticket id,Transport
+card money sent to account id,Transfer
+card auto rickshaw ride txn,Transport
+payment cash withdrawn from atm id,Cash Withdrawal
+bank wifi bill txn,Utilities
+card metro ticket payment id,Transport
+payment upi transfer to friend debit,Transfer
+card fund transfer payment,Transfer
+txn cafe bill charge,Food
+txn taxi fare payment charge,Transport
+bank auto rickshaw ride charge,Transport
+upi mobile recharge payment payment,Utilities
+upi taxi fare payment payment,Transport
+card neft transfer debit,Transfer
+upi jio recharge id,Utilities
+txn cafe bill debit,Food
+txn water bill paid payment,Utilities
+pos gas bill transaction ref,Utilities
+payment flipkart order txn,Shopping
+card refund received debit,Other
+card electricity bill payment payment,Utilities
+card cafe bill ref,Food
+txn unknown transaction id,Other
+upi money sent to account ref,Transfer
+card swiggy food order charge,Food
+bank upi transfer to friend payment,Transfer
+pos imps transfer payment,Transfer
+txn salary credit charge,Other
+upi cafe bill debit,Food
+payment bus ticket payment,Transport
+pos atm cash withdrawal payment,Cash Withdrawal
+pos bus ticket ref,Transport
+txn uber ride ref,Transport
+card ajio clothing order id,Shopping
+payment bus ticket payment,Transport
+upi broadband payment txn,Utilities
+card bank transfer debit txn,Transfer
+bank mobile recharge payment id,Utilities
+card shopping mall purchase ref,Shopping
+pos atm withdrawal debit ref,Cash Withdrawal
+pos swiggy food order charge,Food
+txn cafe bill payment,Food
+card taxi fare payment charge,Transport
+pos imps transfer charge,Transfer
+card taxi fare payment txn,Transport
+payment restaurant bill payment charge,Food
+payment ajio clothing order ref,Shopping
+txn atm txn ref,Cash Withdrawal
+bank dinner at restaurant txn,Food
+pos uber ride id,Transport
+card swiggy food order payment,Food
+txn swiggy food order ref,Food
+card salary credit txn,Other
+debit reward points credit charge,Other
+txn ola cab ride charge,Transport
+debit reward points credit charge,Other
+upi water bill paid payment,Utilities
+txn cafe bill id,Food
+pos electricity bill payment charge,Utilities
+debit food delivery charge ref,Food
+card reward points credit debit,Other
+payment atm withdrawal debit txn,Cash Withdrawal
+pos electricity bill payment txn,Utilities
+card ola cab ride charge,Transport
+upi bus ticket ref,Transport
+upi jio recharge ref,Utilities
+txn bank transfer debit txn,Transfer
+payment cashback credited payment,Other
+debit wifi bill charge,Utilities
+debit jio recharge payment,Utilities
+card wifi bill payment,Utilities
+txn restaurant bill payment id,Food
+upi lunch payment id,Food
+txn reward points credit charge,Other
+card online shopping payment txn,Shopping
+upi uber ride debit,Transport
+debit shopping mall purchase charge,Shopping
+payment zomato food order charge,Food
+pos money sent to account ref,Transfer
+pos neft transfer debit,Transfer
+txn upi transfer to friend id,Transfer
+txn water bill paid payment,Utilities
+pos swiggy food order charge,Food
+card restaurant bill payment payment,Food
+card salary credit payment,Other
+pos myntra fashion purchase debit,Shopping
+bank upi transfer to friend id,Transfer
+card flipkart order txn,Shopping
+card cash withdrawn from atm payment,Cash Withdrawal
+card food delivery charge payment,Food
+pos online shopping payment txn,Shopping
+bank jio recharge debit,Utilities
+debit ajio clothing order id,Shopping
+card bank transfer debit charge,Transfer
+upi food delivery charge id,Food
+payment fund transfer id,Transfer
+debit cafe bill charge,Food
+pos shopping mall purchase txn,Shopping
+bank food delivery charge ref,Food
+bank lunch payment txn,Food
+payment cash withdrawal atm ref,Cash Withdrawal
+upi uber ride txn,Transport
+txn upi payment to contact txn,Transfer
+card online shopping payment txn,Shopping
+txn atm withdrawal debit ref,Cash Withdrawal
+upi jio recharge id,Utilities
+pos swiggy food order ref,Food
+bank cafe bill ref,Food
+card myntra fashion purchase debit,Shopping
+payment metro ticket payment payment,Transport
+pos zomato food order txn,Food
+upi auto rickshaw ride charge,Transport
+debit gas bill transaction payment,Utilities
+debit reward points credit id,Other
+debit zomato food order ref,Food
+bank lunch payment charge,Food
+upi cash withdrawn from atm payment,Cash Withdrawal
+upi electricity bill payment debit,Utilities
+card upi transfer to friend txn,Transfer
+card restaurant bill payment txn,Food
+card atm withdrawal debit debit,Cash Withdrawal
+bank mobile recharge payment ref,Utilities
+payment cash withdrawal atm ref,Cash Withdrawal
+card upi transfer to friend txn,Transfer
+pos money sent to account id,Transfer
+debit shopping mall purchase payment,Shopping
+card money sent to account charge,Transfer
+txn dinner at restaurant id,Food
+bank cashback credited txn,Other
+txn cash withdrawal atm payment,Cash Withdrawal
+payment swiggy food order txn,Food
+upi reward points credit ref,Other
+card water bill paid id,Utilities
+pos electricity bill payment id,Utilities
+upi bus ticket debit,Transport
+bank atm cash withdrawal debit,Cash Withdrawal
+card meesho online order txn,Shopping
+bank dinner at restaurant payment,Food
+upi water bill paid debit,Utilities
+card broadband payment debit,Utilities
+pos taxi fare payment txn,Transport
+card cash withdrawn from atm debit,Cash Withdrawal
+upi jio recharge debit,Utilities
+bank ajio clothing order debit,Shopping
+txn food delivery charge charge,Food
+debit shopping mall purchase payment,Shopping
+txn water bill paid id,Utilities
+txn taxi fare payment payment,Transport
+payment salary credit debit,Other
+debit ajio clothing order payment,Shopping
+txn online shopping payment debit,Shopping
+payment cash withdrawn from atm id,Cash Withdrawal
+card mobile recharge payment charge,Utilities
+txn upi transfer to friend ref,Transfer
+debit food delivery charge charge,Food
+pos cash withdrawn from atm ref,Cash Withdrawal
+pos reward points credit id,Other
+upi bus ticket ref,Transport
+payment swiggy food order charge,Food
+card zomato food order id,Food
+debit upi transfer to friend payment,Transfer
+pos bus ticket payment,Transport
+bank interest credited payment,Other
+upi money sent to account payment,Transfer
+debit taxi fare payment payment,Transport
+txn fund transfer payment,Transfer
+debit zomato food order id,Food
+payment cashback credited id,Other
+debit flipkart order ref,Shopping
+txn bus ticket ref,Transport
+txn atm txn ref,Cash Withdrawal
+upi food delivery charge ref,Food
+debit meesho online order ref,Shopping
+pos wifi bill ref,Utilities
+upi interest credited ref,Other
+pos reward points credit id,Other
+txn meesho online order charge,Shopping
+txn myntra fashion purchase payment,Shopping
+pos taxi fare payment id,Transport
+txn swiggy food order debit,Food
+payment cafe bill txn,Food
+card online shopping payment charge,Shopping
+upi restaurant bill payment txn,Food
+card food delivery charge charge,Food
+bank interest credited payment,Other
+card lunch payment ref,Food
+pos water bill paid debit,Utilities
+pos bank transfer debit debit,Transfer
+txn meesho online order charge,Shopping
+card cafe bill ref,Food
+debit food delivery charge charge,Food
+txn cash withdrawal atm id,Cash Withdrawal
+upi online shopping payment payment,Shopping
+pos amazon order payment,Shopping
+txn money sent to account ref,Transfer
+bank broadband payment ref,Utilities
+card uber ride payment,Transport
+pos cash withdrawn from atm ref,Cash Withdrawal
+payment metro ticket payment ref,Transport
+debit broadband payment payment,Utilities
+payment meesho online order id,Shopping
+txn bank transfer debit charge,Transfer
+pos cashback credited txn,Other
+payment upi transfer to friend charge,Transfer
+payment money sent to account id,Transfer
+debit salary credit payment,Other
+upi fund transfer txn,Transfer
+bank myntra fashion purchase charge,Shopping
+payment reward points credit ref,Other
+upi interest credited payment,Other
+pos neft transfer debit,Transfer
+bank atm cash withdrawal id,Cash Withdrawal
+card unknown transaction txn,Other
+upi swiggy food order id,Food
+payment atm cash withdrawal txn,Cash Withdrawal
+upi money sent to account charge,Transfer
+upi bus ticket txn,Transport
+card flipkart order payment,Shopping
+upi atm cash withdrawal txn,Cash Withdrawal
+debit amazon order id,Shopping
+debit reward points credit txn,Other
+payment shopping mall purchase txn,Shopping
+payment cab booking charge id,Transport
+txn refund received ref,Other
+card dinner at restaurant txn,Food
+card online shopping payment id,Shopping
+bank interest credited debit,Other
+card cashback credited txn,Other
+payment uber ride payment,Transport
+payment atm wdl payment,Cash Withdrawal
+upi shopping mall purchase txn,Shopping
+payment cash withdrawn from atm payment,Cash Withdrawal
+bank shopping mall purchase id,Shopping
+upi auto rickshaw ride charge,Transport
+card online shopping payment id,Shopping
+debit food delivery charge charge,Food
+txn money sent to account debit,Transfer
+debit cab booking charge debit,Transport
+upi salary credit charge,Other
+debit cab booking charge debit,Transport
+pos bus ticket ref,Transport
+pos reward points credit payment,Other
+debit atm txn charge,Cash Withdrawal
+upi gas bill transaction payment,Utilities
+card electricity bill payment ref,Utilities
+txn electricity bill payment id,Utilities
+payment lunch payment txn,Food
+txn electricity bill payment ref,Utilities
+txn myntra fashion purchase txn,Shopping
+txn broadband payment id,Utilities
+payment gas bill transaction txn,Utilities
+txn taxi fare payment id,Transport
+txn water bill paid ref,Utilities
+txn dinner at restaurant id,Food
+upi atm txn payment,Cash Withdrawal
+pos flipkart order ref,Shopping
+card cash withdrawal atm txn,Cash Withdrawal
+upi restaurant bill payment id,Food
+card ola cab ride payment,Transport
+upi atm txn txn,Cash Withdrawal
+txn cash withdrawal atm payment,Cash Withdrawal
+pos lunch payment id,Food
+payment zomato food order debit,Food
+debit cashback credited debit,Other
+debit restaurant bill payment ref,Food
+payment jio recharge payment,Utilities
+card unknown transaction payment,Other
+payment online shopping payment id,Shopping
+bank gas bill transaction ref,Utilities
+upi food delivery charge payment,Food
+debit neft transfer id,Transfer
+bank interest credited debit,Other
+bank atm cash withdrawal charge,Cash Withdrawal
+payment atm cash withdrawal charge,Cash Withdrawal
+bank swiggy food order payment,Food
+payment cafe bill id,Food
+debit flipkart order ref,Shopping
+txn shopping mall purchase id,Shopping
+payment mobile recharge payment txn,Utilities
+bank salary credit charge,Other
+bank metro ticket payment debit,Transport
+payment refund received ref,Other
+debit atm withdrawal debit charge,Cash Withdrawal
+card shopping mall purchase ref,Shopping
+txn cash withdrawal atm ref,Cash Withdrawal
+upi meesho online order debit,Shopping
+upi wifi bill payment,Utilities
+txn imps transfer ref,Transfer
+card bank transfer debit txn,Transfer
+upi water bill paid charge,Utilities
+card cab booking charge charge,Transport
+payment cafe bill debit,Food
+pos imps transfer charge,Transfer
+debit refund received debit,Other
+upi online shopping payment ref,Shopping
+pos auto rickshaw ride charge,Transport
+txn salary credit debit,Other
+upi jio recharge charge,Utilities
+pos metro ticket payment debit,Transport
+bank broadband payment ref,Utilities
+pos money sent to account ref,Transfer
+upi bus ticket ref,Transport
+bank uber ride payment,Transport
+pos flipkart order txn,Shopping
+card atm txn id,Cash Withdrawal
+bank metro ticket payment id,Transport
+payment ola cab ride debit,Transport
+upi fund transfer debit,Transfer
+txn water bill paid payment,Utilities
+bank salary credit txn,Other
+payment lunch payment charge,Food
+payment ola cab ride debit,Transport
+bank uber ride id,Transport
+pos zomato food order id,Food
+bank interest credited payment,Other
+txn money sent to account txn,Transfer
+txn dinner at restaurant debit,Food
+txn cashback credited debit,Other
+upi reward points credit id,Other
+debit electricity bill payment payment,Utilities
+upi amazon order txn,Shopping
+pos imps transfer payment,Transfer
+txn money sent to account debit,Transfer
+payment zomato food order txn,Food
+txn dinner at restaurant txn,Food
+bank cash withdrawn from atm debit,Cash Withdrawal
+payment wifi bill charge,Utilities
+bank ola cab ride txn,Transport
+bank electricity bill payment charge,Utilities
+bank jio recharge payment,Utilities
+debit gas bill transaction txn,Utilities
+bank bus ticket charge,Transport
+txn money sent to account txn,Transfer
+card dinner at restaurant payment,Food
+payment cashback credited id,Other
+bank cash withdrawal atm debit,Cash Withdrawal
+txn upi transfer to friend debit,Transfer
+txn unknown transaction debit,Other
+pos ajio clothing order txn,Shopping
+payment wifi bill id,Utilities
+debit fund transfer id,Transfer
+txn upi payment to contact id,Transfer
+pos upi payment to contact charge,Transfer
+payment myntra fashion purchase charge,Shopping
+upi online shopping payment id,Shopping
+pos auto rickshaw ride payment,Transport
+debit atm withdrawal debit id,Cash Withdrawal
+txn money sent to account charge,Transfer
+card meesho online order id,Shopping
+debit amazon order debit,Shopping
+debit jio recharge ref,Utilities
+pos bank transfer debit charge,Transfer
+upi gas bill transaction txn,Utilities
+payment atm txn txn,Cash Withdrawal
+upi reward points credit ref,Other
+pos refund received ref,Other
