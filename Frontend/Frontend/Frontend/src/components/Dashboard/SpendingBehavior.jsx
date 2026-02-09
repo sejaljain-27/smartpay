@@ -15,8 +15,8 @@ const SpendingBehavior = () => {
                 const config = { headers: { Authorization: `Bearer ${token}` } };
 
                 const [analyticsRes, goalsRes] = await Promise.all([
-                    axios.get('http://localhost:3000/analytics/spending-behavior', config),
-                    axios.get('http://localhost:3000/analytics/goals-status', config)
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/analytics/spending-behavior`, config),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/analytics/goals-status`, config)
                 ]);
 
                 setData(analyticsRes.data);
