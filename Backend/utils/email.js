@@ -25,11 +25,17 @@ export function createTransport() {
   }
 
   if (EMAIL && EMAIL_PASS) {
+    // Use explicit Gmail SMTP settings for better compatibility
     return nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // Use TLS (STARTTLS)
       auth: {
         user: EMAIL,
         pass: EMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false // Allow self-signed certs for some environments
       }
     });
   }
