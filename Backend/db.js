@@ -13,6 +13,7 @@ const {
 } = process.env;
 
 // SSL only in production
+console.log("DB:", process.env.DATABASE_URL);
 const sslConfig =
   NODE_ENV === "production"
     ? { rejectUnauthorized: false }
@@ -164,5 +165,68 @@ export async function initDb() {
         ('Myntra Sale', '15% off using Axis Bank', 15, 'shopping', 'myntra', 'Axis', 1500);
     `);
     console.log("Seeded sample offers.");
+  }
+
+  // --- NEW TABLES ---
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS card_offers (
+      id SERIAL PRIMARY KEY,
+      offer_id TEXT,
+      merchant TEXT,
+      category TEXT,
+      payment_type TEXT,
+      bank TEXT,
+      promo_code TEXT,
+      min_amount NUMERIC DEFAULT 0,
+      discount_type TEXT,
+      discount_value NUMERIC DEFAULT 0,
+      max_discount NUMERIC,
+      trust_level TEXT,
+      valid_from TIMESTAMPTZ DEFAULT NOW(),
+      valid_to TIMESTAMPTZ,
+      offer_type TEXT,
+      card_name TEXT
+    );
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS missed_opportunities (
+      id SERIAL PRIMARY KEY,
+      user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+      offer_id TEXT,
+      merchant TEXT,
+      category TEXT,
+      estimated_savings NUMERIC,
+      reason_for_ignore TEXT,
+      timestamp TIMESTAMPTZ DEFAULT NOW(),
+      payment_type TEXT,
+      card_name TEXT,
+      trust_level TEXT
+    );
+  `);
+
+  // Indexes for performance
+  await pool.query(`
+    CREATE INDEX IF NOT EXISTS idx_card_offers_bank ON card_offers(bank);
+    CREATE INDEX IF NOT EXISTS idx_card_offers_merchant ON card_offers(merchant);
+    CREATE INDEX IF NOT EXISTS idx_missed_opp_user ON missed_opportunities(user_id);
+  `);
+
+  // Seed card_offers if empty
+  const cardOffersCount = await pool.query("SELECT COUNT(*) FROM card_offers");
+  if (parseInt(cardOffersCount.rows[0].count) === 0) {
+    console.log("Seeding card_offers...");
+    await pool.query(`
+      INSERT INTO card_offers 
+      (offer_id, merchant, category, payment_type, bank, promo_code, min_amount, discount_type, discount_value, max_discount, trust_level, valid_to, offer_type, card_name)
+      VALUES
+      ('OFFER_001', 'Amazon', 'Shopping', 'Credit Card', 'HDFC', 'AMZN10', 1000, 'percentage', 10, 500, 'HIGH', '2025-12-31', 'Partner', 'Regalia'),
+      ('OFFER_002', 'Zomato', 'Dining', 'Any', 'Any', 'ZOMATO50', 200, 'percentage', 50, 150, 'MEDIUM', '2025-12-31', 'General', NULL),
+      ('OFFER_003', 'Uber', 'Travel', 'Credit Card', 'Axis', 'UBER5', 0, 'flat', 50, NULL, 'HIGH', '2025-12-31', 'Partner', 'Ace'),
+      ('OFFER_004', 'Myntra', 'Shopping', 'Credit Card', 'ICICI', 'MYNTRA15', 1500, 'percentage', 15, 750, 'MEDIUM', '2025-12-31', 'Partner', 'Coral'),
+      ('OFFER_005', 'Starbucks', 'Dining', 'Credit Card', 'HDFC', 'STAR150', 500, 'flat', 150, NULL, 'HIGH', '2025-12-31', 'Partner', 'Infinia');
+    `);
+    console.log("Seeded card_offers.");
   }
 }
