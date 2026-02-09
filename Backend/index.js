@@ -15,7 +15,21 @@ import { initCronJobs } from "./services/cron.js";
 
 const app = express();
 import cors from "cors";
-app.use(cors());
+
+// CORS configuration for production and localhost
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://smartpay-seven.vercel.app"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.text({ type: "text/plain" }));
 
 app.use(express.json());

@@ -28,7 +28,13 @@ export default function SignUpPage() {
       // Navigate to OTP page and pass email
       navigate("/verify-otp", { state: { email } })
     } catch (err) {
-      setError(err.response?.data?.error || "Signup failed")
+      console.error("Signup error:", err);
+      // Show detailed error for debugging
+      const errorMsg = err.response?.data?.error
+        || err.response?.data?.message
+        || err.message
+        || "Signup failed - check network/backend";
+      setError(errorMsg)
     } finally {
       setLoading(false)
     }
