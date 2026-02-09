@@ -92,6 +92,16 @@ export async function initDb() {
     ADD COLUMN IF NOT EXISTS available_balance NUMERIC;
   `);
 
+  // Additional columns required by routes/sms.js, routes/transactions.js, routes/offers.js
+  await pool.query(`
+    ALTER TABLE IF EXISTS transactions
+    ADD COLUMN IF NOT EXISTS card_name TEXT,
+    ADD COLUMN IF NOT EXISTS ignored_offer BOOLEAN DEFAULT FALSE,
+    ADD COLUMN IF NOT EXISTS missed_saving_amount NUMERIC DEFAULT 0,
+    ADD COLUMN IF NOT EXISTS recommended_card TEXT,
+    ADD COLUMN IF NOT EXISTS savings NUMERIC DEFAULT 0;
+  `);
+
   await pool.query(`
     ALTER TABLE IF EXISTS goals
     ADD COLUMN IF NOT EXISTS user_id INTEGER REFERENCES users(id) ON DELETE CASCADE;
