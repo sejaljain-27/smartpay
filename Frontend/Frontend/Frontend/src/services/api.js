@@ -1,7 +1,23 @@
 import axios from 'axios';
 
+function resolveApiBaseUrl() {
+  const raw = import.meta.env.VITE_API_BASE_URL;
+  if (raw != null && String(raw).trim() !== '') {
+    return String(raw).replace(/\/$/, '');
+  }
+  if (import.meta.env.DEV) {
+    return 'http://localhost:3000';
+  }
+  if (import.meta.env.PROD) {
+    console.error(
+      'SmartPay: set VITE_API_BASE_URL in the deploy environment to your backend origin (for example https://your-api.example.com).'
+    );
+  }
+  return '';
+}
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: resolveApiBaseUrl(),
   timeout: 10000, // 10 seconds timeout
   withCredentials: true, // Enable credentials for cross-origin requests
 });

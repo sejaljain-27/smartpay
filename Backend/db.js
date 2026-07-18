@@ -1,3 +1,4 @@
+import "dotenv/config";
 import pg from "pg";
 
 const { Pool } = pg;
@@ -12,12 +13,22 @@ const {
   NODE_ENV
 } = process.env;
 
-// SSL only in production
-console.log("DB:", process.env.DATABASE_URL);
 const sslConfig =
   NODE_ENV === "production"
     ? { rejectUnauthorized: false }
     : false;
+
+const hasDiscreteDb =
+  Boolean(DB_HOST) && Boolean(DB_USER) && DB_NAME != null && DB_NAME !== "";
+
+if (!DATABASE_URL && !hasDiscreteDb) {
+  throw new Error(
+    "Database config missing: set DATABASE_URL or DB_HOST, DB_USER, DB_NAME (and DB_PASSWORD) in Backend/.env"
+  );
+}
+
+// pg SCRAM requires password to be a string; empty string is ok for local trust-only setups
+const discretePassword = String(DB_PASSWORD ?? "");
 
 const pool = DATABASE_URL
   ? new Pool({
@@ -28,7 +39,7 @@ const pool = DATABASE_URL
     host: DB_HOST,
     port: DB_PORT ? Number(DB_PORT) : undefined,
     user: DB_USER,
-    password: DB_PASSWORD ? String(DB_PASSWORD) : undefined,
+    password: discretePassword,
     database: DB_NAME,
     ssl: sslConfig
   });

@@ -23,7 +23,16 @@ export default function LoginPage() {
         setError("No token received. Check backend response.");
       }
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      const data = err.response?.data;
+      const msg =
+        data?.error ||
+        data?.message ||
+        (err.response?.status === 404
+          ? "API not found — check VITE_API_BASE_URL matches your backend."
+          : null) ||
+        err.message ||
+        "Login failed";
+      setError(msg);
     } finally {
       setLoading(false);
     }

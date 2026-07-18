@@ -49,7 +49,14 @@ export default function SignUpPage() {
         navigate("/dashboard")
       }
     } catch (err) {
-      setError("Google login failed")
+      const data = err.response?.data;
+      setError(
+        data?.error ||
+          data?.message ||
+          (err.response?.status === 404
+            ? "API not found — set VITE_API_BASE_URL to your backend URL."
+            : "Google login failed")
+      )
     } finally {
       setLoading(false)
     }
@@ -131,14 +138,14 @@ export default function SignUpPage() {
               <div className="h-px bg-white/10 flex-1" />
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex w-full max-w-sm justify-center">
               <GoogleLogin
                 onSuccess={handleGoogleSuccess}
                 onError={() => setError("Google Signup Failed")}
                 theme="filled_black"
                 shape="pill"
                 size="large"
-                width="100%"
+                width={384}
               />
             </div>
           </div>

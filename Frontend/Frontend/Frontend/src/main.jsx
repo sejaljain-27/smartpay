@@ -5,8 +5,9 @@ import './index.css'
 import 'leaflet/dist/leaflet.css'
 import App from './App.jsx'
 
-// Hardcoded for now based on backend .env, or should be in frontend .env
-const GOOGLE_CLIENT_ID = "41416818858-s3hpnctkk1ep7rkngosspka2e2tjips3.apps.googleusercontent.com"
+const GOOGLE_CLIENT_ID =
+  import.meta.env.VITE_GOOGLE_CLIENT_ID ||
+  "41416818858-s3hpnctkk1ep7rkngosspka2e2tjips3.apps.googleusercontent.com"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
