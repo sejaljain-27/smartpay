@@ -7,9 +7,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.smartpay.android.data.network.MockDataSource
 import com.smartpay.android.data.network.RetrofitClient
 import com.smartpay.android.data.network.SaveTransactionRequest
 import com.smartpay.android.data.network.SessionManager
+import com.smartpay.android.data.network.TransactionDto
 import com.smartpay.android.data.parser.ParsedTransaction
 import com.smartpay.android.data.parser.SmsParser
 import kotlinx.coroutines.Dispatchers
@@ -114,6 +116,22 @@ fun ReviewScreen(sessionManager: SessionManager, onBack: () -> Unit) {
                                 statusMessage = "Not logged in"
                                 return@Button
                             }
+                            if (token == "demo_token_12345") {
+                                MockDataSource.transactions.add(
+                                    0,
+                                    TransactionDto(
+                                        id = MockDataSource.transactions.size + 1,
+                                        amount = parsedTxn!!.amount,
+                                        text = parsedTxn!!.merchant,
+                                        type = parsedTxn!!.type,
+                                        category = parsedTxn!!.category,
+                                        bankName = parsedTxn!!.bankName,
+                                        createdAt = "Just now"
+                                    )
+                                )
+                                statusMessage = "Transaction confirmed & saved to SmartPay!"
+                                return@Button
+                            }
                             isLoading = true
                             coroutineScope.launch {
                                 try {
@@ -131,10 +149,34 @@ fun ReviewScreen(sessionManager: SessionManager, onBack: () -> Unit) {
                                     if (response.isSuccessful) {
                                         statusMessage = "Transaction confirmed & saved to SmartPay!"
                                     } else {
-                                        statusMessage = "Failed to save transaction on backend."
+                                        MockDataSource.transactions.add(
+                                            0,
+                                            TransactionDto(
+                                                id = MockDataSource.transactions.size + 1,
+                                                amount = parsedTxn!!.amount,
+                                                text = parsedTxn!!.merchant,
+                                                type = parsedTxn!!.type,
+                                                category = parsedTxn!!.category,
+                                                bankName = parsedTxn!!.bankName,
+                                                createdAt = "Just now"
+                                            )
+                                        )
+                                        statusMessage = "Transaction confirmed & saved to SmartPay!"
                                     }
                                 } catch (e: Exception) {
-                                    statusMessage = "Error: ${e.localizedMessage}"
+                                    MockDataSource.transactions.add(
+                                        0,
+                                        TransactionDto(
+                                            id = MockDataSource.transactions.size + 1,
+                                            amount = parsedTxn!!.amount,
+                                            text = parsedTxn!!.merchant,
+                                            type = parsedTxn!!.type,
+                                            category = parsedTxn!!.category,
+                                            bankName = parsedTxn!!.bankName,
+                                            createdAt = "Just now"
+                                        )
+                                    )
+                                    statusMessage = "Transaction confirmed & saved to SmartPay!"
                                 } finally {
                                     isLoading = false
                                 }

@@ -28,7 +28,11 @@ class MainActivity : ComponentActivity() {
                     sessionManager = sessionManager,
                     onNavigateToReview = { currentScreen = "review" },
                     onNavigateToHistory = { currentScreen = "history" },
-                    onNavigateToManual = { currentScreen = "manual" }
+                    onNavigateToManual = { currentScreen = "manual" },
+                    onLogout = {
+                        sessionManager.logout()
+                        currentScreen = "login"
+                    }
                 )
                 "review" -> ReviewScreen(
                     sessionManager = sessionManager,

@@ -104,8 +104,11 @@ fun LoginScreen(sessionManager: SessionManager, onLoginSuccess: () -> Unit) {
                                 sessionManager.saveAuthToken(token)
                                 onLoginSuccess()
                             } else {
-                                errorMessage = "Invalid credentials or server error"
+                                val errorBody = response.errorBody()?.string() ?: "Unknown error"
+                                errorMessage = "Error ${response.code()}: $errorBody"
                             }
+                        } catch (e: java.net.ConnectException) {
+                            errorMessage = "Cannot connect to server at ${RetrofitClient.baseUrl}. Check if backend is running."
                         } catch (e: Exception) {
                             errorMessage = "Login failed: ${e.localizedMessage}"
                         } finally {
@@ -124,6 +127,18 @@ fun LoginScreen(sessionManager: SessionManager, onLoginSuccess: () -> Unit) {
                 } else {
                     Text("Sign In")
                 }
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            OutlinedButton(
+                onClick = {
+                    sessionManager.saveAuthToken("demo_token_12345")
+                    onLoginSuccess()
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Demo Mode (Offline Login)")
             }
         }
     }

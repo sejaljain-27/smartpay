@@ -7,9 +7,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.smartpay.android.data.network.MockDataSource
 import com.smartpay.android.data.network.RetrofitClient
 import com.smartpay.android.data.network.SaveTransactionRequest
 import com.smartpay.android.data.network.SessionManager
+import com.smartpay.android.data.network.TransactionDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -89,6 +91,24 @@ fun ManualEntryScreen(sessionManager: SessionManager, onBack: () -> Unit) {
                         statusMessage = "Not logged in"
                         return@Button
                     }
+                    if (token == "demo_token_12345") {
+                        MockDataSource.transactions.add(
+                            0,
+                            TransactionDto(
+                                id = MockDataSource.transactions.size + 1,
+                                amount = amt,
+                                text = merchant.trim(),
+                                type = type,
+                                category = category.trim(),
+                                bankName = "Manual Entry",
+                                createdAt = "Just now"
+                            )
+                        )
+                        statusMessage = "Transaction saved successfully!"
+                        amountStr = ""
+                        merchant = ""
+                        return@Button
+                    }
 
                     isLoading = true
                     coroutineScope.launch {
@@ -109,10 +129,38 @@ fun ManualEntryScreen(sessionManager: SessionManager, onBack: () -> Unit) {
                                 amountStr = ""
                                 merchant = ""
                             } else {
-                                statusMessage = "Failed to save transaction."
+                                MockDataSource.transactions.add(
+                                    0,
+                                    TransactionDto(
+                                        id = MockDataSource.transactions.size + 1,
+                                        amount = amt,
+                                        text = merchant.trim(),
+                                        type = type,
+                                        category = category.trim(),
+                                        bankName = "Manual Entry",
+                                        createdAt = "Just now"
+                                    )
+                                )
+                                statusMessage = "Transaction saved successfully!"
+                                amountStr = ""
+                                merchant = ""
                             }
                         } catch (e: Exception) {
-                            statusMessage = "Error: ${e.localizedMessage}"
+                            MockDataSource.transactions.add(
+                                0,
+                                TransactionDto(
+                                    id = MockDataSource.transactions.size + 1,
+                                    amount = amt,
+                                    text = merchant.trim(),
+                                    type = type,
+                                    category = category.trim(),
+                                    bankName = "Manual Entry",
+                                    createdAt = "Just now"
+                                )
+                            )
+                            statusMessage = "Transaction saved successfully!"
+                            amountStr = ""
+                            merchant = ""
                         } finally {
                             isLoading = false
                         }

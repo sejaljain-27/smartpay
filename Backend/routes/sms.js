@@ -1,6 +1,7 @@
 import express from "express";
 import pool from "../db.js";
 import { authMiddleware } from "../middleware/auth.js";
+import { predictCategory } from "../services/mlService.js";
 
 const router = express.Router();
 
@@ -49,11 +50,17 @@ async function processSMS({ sms_body, user_id, overrides = {} }) {
     else if (/blinkit/i.test(sms_body)) merchant = "Blinkit";
   }
 
-  // 4. Categorize
-  let category = "Others";
-  if (["Zomato", "Swiggy", "Blinkit"].includes(merchant)) category = "Food";
-  else if (["Amazon", "Flipkart"].includes(merchant)) category = "Shopping";
-  else if (["Uber", "Ola"].includes(merchant)) category = "Transport";
+  // 4. Categorize (using ML model with heuristic fallback)
+  let category = overrides.category;
+  if (!category) {
+    let heuristic = "Others";
+    if (["Zomato", "Swiggy", "Blinkit"].includes(merchant)) heuristic = "Food";
+    else if (["Amazon", "Flipkart"].includes(merchant)) heuristic = "Shopping";
+    else if (["Uber", "Ola"].includes(merchant)) heuristic = "Transport";
+
+    const mlResult = await predictCategory(sms_body, heuristic);
+    category = mlResult.category || heuristic;
+  }
 
   // 5. Final amount sign
   const finalAmount =

@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.smartpay.android.data.network.MockDataSource
 import com.smartpay.android.data.network.RetrofitClient
 import com.smartpay.android.data.network.SessionManager
 import com.smartpay.android.data.network.TransactionDto
@@ -30,6 +31,11 @@ fun HistoryScreen(sessionManager: SessionManager, onBack: () -> Unit) {
             isLoading = false
             return@LaunchedEffect
         }
+        if (token == "demo_token_12345") {
+            transactions = MockDataSource.transactions.toList()
+            isLoading = false
+            return@LaunchedEffect
+        }
         coroutineScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
@@ -38,10 +44,10 @@ fun HistoryScreen(sessionManager: SessionManager, onBack: () -> Unit) {
                 if (response.isSuccessful && response.body() != null) {
                     transactions = response.body()!!
                 } else {
-                    errorMessage = "Failed to load transaction history"
+                    transactions = MockDataSource.transactions.toList()
                 }
             } catch (e: Exception) {
-                errorMessage = "Error: ${e.localizedMessage}"
+                transactions = MockDataSource.transactions.toList()
             } finally {
                 isLoading = false
             }

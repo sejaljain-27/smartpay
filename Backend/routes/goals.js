@@ -1,6 +1,7 @@
 import express from "express";
 import pool from "../db.js";
 import { authMiddleware } from "../middleware/auth.js";
+import { predictGoalRisk } from "../services/mlService.js";
 
 const router = express.Router();
 
@@ -61,12 +62,33 @@ router.get("/progress", async (req, res) => {
     const remaining = target - spent;
     const percentage = Math.min(Math.round((spent / target) * 100), 100);
 
+    // Calculate days remaining and average daily spend for ML goal risk prediction
+    const now = new Date();
+    const [yearStr, monthStr] = (month || "").split("-");
+    const targetYear = parseInt(yearStr, 10) || now.getFullYear();
+    const targetMonth = parseInt(monthStr, 10) || (now.getMonth() + 1);
+    const daysInMonth = new Date(targetYear, targetMonth, 0).getDate();
+    const currentDay = (now.getFullYear() === targetYear && now.getMonth() + 1 === targetMonth)
+      ? now.getDate()
+      : Math.min(now.getDate(), daysInMonth);
+
+    const daysRemaining = Math.max(1, daysInMonth - currentDay);
+    const avgDailySpend = currentDay > 0 ? (spent / currentDay) : spent;
+
+    // Call ML Goal Risk Model
+    const riskResult = await predictGoalRisk(avgDailySpend, daysRemaining, target);
+
     res.json({
       month,
       target,
       spent,
       remaining,
-      percentage
+      percentage,
+      risk: riskResult.risk,
+      riskLevel: riskResult.risk === "HIGH" ? "High Risk" : "On Track",
+      avgDailySpend: Math.round(avgDailySpend * 100) / 100,
+      daysRemaining,
+      mlSource: riskResult.source
     });
   } catch (error) {
     console.error(error);

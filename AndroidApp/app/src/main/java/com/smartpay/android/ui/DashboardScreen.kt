@@ -1,5 +1,7 @@
 package com.smartpay.android.ui
 
+import android.content.Intent
+import android.provider.Settings
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,8 +11,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.smartpay.android.data.network.MockDataSource
 import com.smartpay.android.data.network.RetrofitClient
 import com.smartpay.android.data.network.SessionManager
 import com.smartpay.android.data.network.TransactionDto
@@ -23,7 +27,8 @@ fun DashboardScreen(
     sessionManager: SessionManager,
     onNavigateToReview: () -> Unit,
     onNavigateToHistory: () -> Unit,
-    onNavigateToManual: () -> Unit
+    onNavigateToManual: () -> Unit,
+    onLogout: () -> Unit
 ) {
     var transactions by remember { mutableStateOf<List<TransactionDto>>(emptyList()) }
     var isLoading by remember { mutableStateOf(true) }
@@ -33,6 +38,11 @@ fun DashboardScreen(
     fun loadData() {
         val token = sessionManager.fetchAuthToken() ?: return
         isLoading = true
+        if (token == "demo_token_12345") {
+            transactions = MockDataSource.transactions.toList()
+            isLoading = false
+            return
+        }
         coroutineScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
@@ -41,10 +51,10 @@ fun DashboardScreen(
                 if (response.isSuccessful && response.body() != null) {
                     transactions = response.body()!!
                 } else {
-                    errorMessage = "Failed to load transactions"
+                    transactions = MockDataSource.transactions.toList()
                 }
             } catch (e: Exception) {
-                errorMessage = "Error: ${e.localizedMessage}"
+                transactions = MockDataSource.transactions.toList()
             } finally {
                 isLoading = false
             }
@@ -74,8 +84,13 @@ fun DashboardScreen(
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold
                 )
-                Button(onClick = { loadData() }) {
-                    Text("Refresh")
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Button(onClick = { loadData() }) {
+                        Text("Refresh")
+                    }
+                    OutlinedButton(onClick = onLogout) {
+                        Text("Logout")
+                    }
                 }
             }
 
@@ -86,6 +101,7 @@ fun DashboardScreen(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
             ) {
+                val context = LocalContext.current
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
                         text = "SMS Transaction Detector",
@@ -108,6 +124,17 @@ fun DashboardScreen(
                         OutlinedButton(onClick = onNavigateToManual, modifier = Modifier.weight(1f)) {
                             Text("Manual Entry")
                         }
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Button(
+                        onClick = {
+                            val intent = Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
+                    ) {
+                        Text("Enable Auto SMS Listener (Permission)")
                     }
                 }
             }

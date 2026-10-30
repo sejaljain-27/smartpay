@@ -1,18 +1,30 @@
+import os
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 import numpy as np
 
-print("LOADING FULL ML SERVICE ")
+print("LOADING FULL ML SERVICE")
 
 app = FastAPI(title="ML Services API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ======================================================
 # TASK 1: EXPENSE CATEGORY PREDICTION
 # ======================================================
 
-category_model = joblib.load("models/category_model.pkl")
-vectorizer = joblib.load("models/vectorizer.pkl")
+category_model = joblib.load(os.path.join(BASE_DIR, "models", "category_model.pkl"))
+vectorizer = joblib.load(os.path.join(BASE_DIR, "models", "vectorizer.pkl"))
 
 class CategoryRequest(BaseModel):
     text: str
@@ -32,7 +44,7 @@ def predict_category(req: CategoryRequest):
 # TASK 2: GOAL RISK PREDICTION
 # ======================================================
 
-goal_model = joblib.load("models/goal_risk_model.pkl")
+goal_model = joblib.load(os.path.join(BASE_DIR, "models", "goal_risk_model.pkl"))
 
 class GoalRequest(BaseModel):
     avg_daily_spend: float
@@ -52,9 +64,9 @@ def predict_goal_risk(req: GoalRequest):
 # TASK 3: SPENDING BEHAVIOR CLUSTERING
 # ======================================================
 
-cluster_model = joblib.load("models/cluster_model.pkl")
-cluster_scaler = joblib.load("models/cluster_scaler.pkl")
-cluster_labels = joblib.load("models/cluster_labels.pkl")
+cluster_model = joblib.load(os.path.join(BASE_DIR, "models", "cluster_model.pkl"))
+cluster_scaler = joblib.load(os.path.join(BASE_DIR, "models", "cluster_scaler.pkl"))
+cluster_labels = joblib.load(os.path.join(BASE_DIR, "models", "cluster_labels.pkl"))
 
 class ClusterRequest(BaseModel):
     food: float
@@ -99,3 +111,7 @@ def cluster_user(req: ClusterRequest):
 @app.get("/")
 def root():
     return {"message": "ML Service API is running"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok", "service": "ML Services API"}
