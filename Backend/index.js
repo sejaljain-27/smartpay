@@ -47,8 +47,14 @@ app.use(express.text({ type: "text/plain" }));
 
 app.use(express.json());
 
+let isDbConnected = false;
+
 app.get("/health", (_req, res) => {
-  res.json({ status: "Backend running" });
+  res.json({
+    status: "Backend running",
+    database: isDbConnected ? "connected" : "disconnected",
+    timestamp: new Date().toISOString()
+  });
 });
 app.get("/", (req, res) => {
   res.send("Backend is running");
@@ -66,26 +72,29 @@ app.use("/insights", insightsRoutes);
 app.use("/chat", chatRouter);
 app.use("/analytics", analyticsRouter);
 
-
-
+app.post("/api/transactions", (req, res) => {
+  console.log(req.body);
+  res.status(200).send("OK");
+});
 
 const port = process.env.PORT || 3000;
 
-async function startServer() {
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+async function startBackgroundServices() {
   try {
     await initDb();
+    isDbConnected = true;
+    console.log("Database initialized successfully.");
     initCronJobs();
-    app.listen(port, () => {
-      console.log(`Server listening on port ${port}`);
-    });
   } catch (error) {
-    console.error("Failed to initialize database", error);
-    process.exit(1);
+    isDbConnected = false;
+    console.error("[DATABASE INITIALIZATION ERROR]:", error.message || error);
+    console.warn("⚠️  Server is alive and listening on port " + port + ", but could not connect to PostgreSQL.");
+    console.warn("⚠️  Please verify your DATABASE_URL in Render Dashboard -> Environment variables.");
   }
 }
-app.post("/api/transactions", (req, res) => {
-  console.log(req.body)
-  res.status(200).send("OK")
-})
 
-startServer();
+startBackgroundServices();

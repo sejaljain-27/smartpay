@@ -19,10 +19,16 @@ const {
   NODE_ENV
 } = process.env;
 
+const isLocalhost =
+  (DATABASE_URL && (DATABASE_URL.includes("localhost") || DATABASE_URL.includes("127.0.0.1"))) ||
+  (DB_HOST && (DB_HOST === "localhost" || DB_HOST === "127.0.0.1"));
+
 const sslConfig =
-  NODE_ENV === "production"
-    ? { rejectUnauthorized: false }
-    : false;
+  isLocalhost || (DATABASE_URL && DATABASE_URL.includes("sslmode=disable"))
+    ? false
+    : (NODE_ENV === "production" || Boolean(DATABASE_URL))
+      ? { rejectUnauthorized: false }
+      : false;
 
 const hasDiscreteDb =
   Boolean(DB_HOST) && Boolean(DB_USER) && DB_NAME != null && DB_NAME !== "";
@@ -51,12 +57,29 @@ const pool = DATABASE_URL
   });
 
 pool.on("error", (err) => {
-  console.error("Unexpected PG pool error", err);
+  console.error("Unexpected PG pool error:", err.message || err);
 });
 
 export default pool;
 
-export async function initDb() {
+export async function initDb(retries = 3, delayMs = 3000) {
+  let connected = false;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      await pool.query("SELECT 1;");
+      console.log("[DB] Connected to PostgreSQL successfully.");
+      connected = true;
+      break;
+    } catch (err) {
+      console.error(`[DB] Connection attempt ${attempt}/${retries} failed:`, err.message || err);
+      if (attempt < retries) {
+        console.log(`[DB] Retrying connection in ${delayMs / 1000}s...`);
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
+      } else {
+        throw err;
+      }
+    }
+  }
   await pool.query(`
     CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
