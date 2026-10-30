@@ -18,7 +18,7 @@ function resolveApiBaseUrl() {
 
 const api = axios.create({
   baseURL: resolveApiBaseUrl(),
-  timeout: 10000, // 10 seconds timeout
+  timeout: 30000, // 30 seconds timeout to accommodate cloud hosting cold starts
   withCredentials: true, // Enable credentials for cross-origin requests
 });
 

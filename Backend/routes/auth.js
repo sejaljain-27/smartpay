@@ -133,6 +133,20 @@ router.put("/me", authMiddleware, async (req, res) => {
   }
 });
 
+async function deliverOtpEmail(email, otp, expiresInMinutes) {
+  try {
+    const sendPromise = sendOtpEmail({ to: email, otp, expiresInMinutes });
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Email delivery timed out (e.g. SMTP blocked by cloud provider)")), 4000)
+    );
+    await Promise.race([sendPromise, timeoutPromise]);
+    return true;
+  } catch (err) {
+    console.warn(`[AUTH] OTP email delivery failed or timed out: ${err.message}. Dev OTP for ${email}: ${otp}`);
+    return false;
+  }
+}
+
 async function handleSignup(req, res) {
   try {
     const { email, password, name } = req.body;
@@ -175,13 +189,7 @@ async function handleSignup(req, res) {
     const otp = generateOtp();
     const expiresInMinutes = setOtp(cleanEmail, otp);
 
-    let emailSent = false;
-    try {
-      await sendOtpEmail({ to: user.email, otp, expiresInMinutes });
-      emailSent = true;
-    } catch (emailError) {
-      console.warn(`[AUTH] Email send failed: ${emailError.message}. Dev OTP for ${user.email} is: ${otp}`);
-    }
+    const emailSent = await deliverOtpEmail(user.email, otp, expiresInMinutes);
 
     return res.status(201).json({
       message: emailSent
@@ -296,13 +304,7 @@ router.post("/request-otp", async (req, res) => {
     const otp = generateOtp();
     const expiresInMinutes = setOtp(cleanEmail, otp);
 
-    let emailSent = false;
-    try {
-      await sendOtpEmail({ to: cleanEmail, otp, expiresInMinutes });
-      emailSent = true;
-    } catch (emailError) {
-      console.warn(`[AUTH] Resend OTP email failed: ${emailError.message}. Dev OTP: ${otp}`);
-    }
+    const emailSent = await deliverOtpEmail(cleanEmail, otp, expiresInMinutes);
 
     return res.json({
       message: emailSent ? "OTP sent to your email" : `OTP generated: ${otp}`,
