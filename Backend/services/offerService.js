@@ -40,6 +40,7 @@ export const findBestOfferWaterfall = async (userId, amount, category, merchant)
                     LOWER(o.card_required) = 'any' 
                     OR uc.user_id = $1
                 )
+                AND (o.min_spend IS NULL OR o.min_spend <= $4)
             ORDER BY o.id, o.discount_percentage DESC
         `;
 
@@ -61,6 +62,7 @@ export const findBestOfferWaterfall = async (userId, amount, category, merchant)
                 active = TRUE
                 AND (LOWER(merchant) = $1 OR LOWER(category) = $2)
                 AND LOWER(card_required) = 'any'
+                AND (min_spend IS NULL OR min_spend <= $3)
             ORDER BY discount_percentage DESC
             LIMIT 1
         `;
@@ -79,6 +81,7 @@ export const findBestOfferWaterfall = async (userId, amount, category, merchant)
             FROM offers 
             WHERE active = TRUE 
             AND LOWER(card_required) = 'any'
+            AND (min_spend IS NULL OR min_spend <= $1)
             ORDER BY discount_percentage DESC 
             LIMIT 1
         `;

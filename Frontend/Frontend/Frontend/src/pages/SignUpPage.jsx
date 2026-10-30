@@ -24,9 +24,9 @@ export default function SignUpPage() {
     setError("")
 
     try {
-      await signup(email, password, name) // Pass name to API
-      // Navigate to OTP page and pass email
-      navigate("/verify-otp", { state: { email } })
+      const { data } = await signup(email, password, name) // Pass name to API
+      // Navigate to OTP page and pass email (and devOtp if email service isn't active)
+      navigate("/verify-otp", { state: { email, devOtp: data?.otp } })
     } catch (err) {
       console.error("Signup error:", err);
       // Show detailed error for debugging
@@ -46,7 +46,7 @@ export default function SignUpPage() {
       const { data } = await googleLogin({ idToken: credentialResponse.credential })
       if (data.token) {
         localStorage.setItem("token", data.token)
-        navigate("/dashboard")
+        navigate("/about-to-pay")
       }
     } catch (err) {
       const data = err.response?.data;

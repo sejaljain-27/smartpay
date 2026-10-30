@@ -2,12 +2,45 @@ import pool from "../db.js";
 import { calculateSmartScore } from "./smartScore.js";
 import { findBestOfferWaterfall } from "./offerService.js";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
-// 1. INITIALIZE GEMINI (SOLE LLM PROVIDER)
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
-// Use a lightweight, stable model for speed
-// Revert to working model (with enhanced fallback)
-const geminiModel = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, "..", ".env") });
+dotenv.config();
+
+// Supported, fast Gemini models with automatic fallback
+const CANDIDATE_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-flash-latest"
+];
+
+async function generateWithGemini(prompt, isJson = false) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+        throw new Error("GEMINI_API_KEY is not configured in Backend/.env");
+    }
+
+    const genAI = new GoogleGenerativeAI(apiKey);
+    let lastError = null;
+
+    for (const modelName of CANDIDATE_MODELS) {
+        try {
+            const config = isJson ? { responseMimeType: "application/json" } : undefined;
+            const model = genAI.getGenerativeModel({ model: modelName, generationConfig: config });
+            const result = await model.generateContent(prompt);
+            const text = result?.response?.text();
+            if (text) return text;
+        } catch (err) {
+            console.warn(`[GEMINI] Model ${modelName} warning:`, err.message);
+            lastError = err;
+        }
+    }
+
+    throw lastError || new Error("All Gemini models failed to respond");
+}
 
 // 2. STRICT RATE LIMITING & LOCKING
 // Map<userId, timestamp>
@@ -127,20 +160,27 @@ export const processChatMessage = async (userId, message) => {
           USER MESSAGE: ${message}
         `;
 
-        // CALL GEMINI (SINGLE ATTEMPT, NO RETRY)
-        const result = await geminiModel.generateContent(systemPrompt);
-        const responseText = result.response.text();
-
+        // CALL GEMINI WITH MULTI-MODEL FALLBACK
+        const responseText = await generateWithGemini(systemPrompt, false);
         return responseText;
 
     } catch (error) {
-        if (error.message.includes("429")) {
-            console.warn("[GEMINI_RATE_LIMIT] Quota exceeded. Using fallback.");
-        } else {
-            console.error("[GEMINI_ERROR] Failed:", error.message);
+        console.error("[GEMINI_ERROR] Failed:", error.message);
+        try {
+            const finContext = await getFinancialContext(userId);
+            const spent = finContext.totalSpent || 0;
+            const goal = finContext.goalTarget || 0;
+            const score = finContext.smartScore != null ? `${finContext.smartScore}/100` : "Good";
+            const topCats = finContext.topCategories || "general spending";
+
+            return `Here is your current financial snapshot:\n\n` +
+                `• **Smart Score**: ${score}\n` +
+                `• **Current Spend**: ₹${spent}${goal > 0 ? ` (Goal: ₹${goal})` : ""}\n` +
+                `• **Top Categories**: ${topCats}\n\n` +
+                `💡 **Coach Tip**: Keep tracking your transactions and stay mindful of category limits to maximize your savings!`;
+        } catch {
+            return "I'm focusing on your numbers right now! 🧠 Try checking your **Dashboard** or **Goals** page for the latest updates.";
         }
-        // Graceful Fallback (No error shown to user)
-        return "I'm focusing on your numbers right now! 🧠 Try checking your **Dashboard** or **Goals** page for the latest updates.";
     } finally {
         // RELEASE LOCK ALWAYS
         userProcessingLock.delete(userId);
@@ -302,13 +342,8 @@ export const analyzePrePayTransaction = async (userId, amount, category) => {
         `;
 
         try {
-            const jsonModel = genAI.getGenerativeModel({
-                model: "gemini-flash-latest",
-                generationConfig: { responseMimeType: "application/json" }
-            });
-
-            const result = await jsonModel.generateContent(prompt);
-            const aiResult = JSON.parse(result.response.text());
+            const jsonText = await generateWithGemini(prompt, true);
+            const aiResult = JSON.parse(jsonText);
 
             // MERGE AI result with Deterministic Insight
             return {

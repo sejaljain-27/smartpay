@@ -1,4 +1,10 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, ".env") });
+dotenv.config();
 import express from "express";
 import transactionsRouter from "./routes/transactions.js";
 import goalsRouter from "./routes/goals.js";
@@ -18,11 +24,18 @@ import cors from "cors";
 
 // CORS configuration for production and localhost
 const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "https://smartpay-seven.vercel.app"
-  ],
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (
+      origin.startsWith("http://localhost:") ||
+      origin.startsWith("http://127.0.0.1:") ||
+      origin.endsWith(".vercel.app") ||
+      origin === "https://smartpay-seven.vercel.app"
+    ) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]

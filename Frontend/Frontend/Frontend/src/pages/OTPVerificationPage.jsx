@@ -9,6 +9,7 @@ export default function OTPVerificationPage() {
   const [otp, setOtp] = useState(new Array(6).fill(""))
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const [devOtp, setDevOtp] = useState(location.state?.devOtp || "")
   const inputRefs = useRef([])
 
   const email = location.state?.email
@@ -16,11 +17,14 @@ export default function OTPVerificationPage() {
   useEffect(() => {
     if (!email) {
       navigate("/signup") // Redirect if no email state
+      return
     }
-    if (inputRefs.current[0]) {
+    if (devOtp && devOtp.length === 6) {
+      setOtp(devOtp.split(""))
+    } else if (inputRefs.current[0]) {
       inputRefs.current[0].focus()
     }
-  }, [email, navigate])
+  }, [email, devOtp, navigate])
 
   const handleChange = (index, e) => {
     const value = e.target.value
@@ -56,8 +60,13 @@ export default function OTPVerificationPage() {
     setError("")
 
     try {
-      await verifyOtp({ email, otp: otpValue })
-      navigate("/login") // Or dashboard, depending on flow. Usually login after verify.
+      const { data } = await verifyOtp({ email, otp: otpValue })
+      if (data?.token) {
+        localStorage.setItem("token", data.token)
+        navigate("/about-to-pay")
+      } else {
+        navigate("/login")
+      }
     } catch (err) {
       setError(err.response?.data?.error || "Verification failed")
     } finally {
@@ -68,15 +77,19 @@ export default function OTPVerificationPage() {
   const handleResend = async () => {
     try {
       setLoading(true)
-      await resendOtp({ email })
+      const { data } = await resendOtp({ email })
       setError("")
-      setOtp(new Array(6).fill(""))
+      if (data?.otp) {
+        setDevOtp(data.otp)
+        setOtp(data.otp.split(""))
+      } else {
+        setOtp(new Array(6).fill(""))
+      }
       if (inputRefs.current[0]) {
         inputRefs.current[0].focus()
       }
-      alert("OTP sent successfully to " + email)
     } catch (err) {
-      setError("Failed to resend OTP")
+      setError(err.response?.data?.error || "Failed to resend OTP")
     } finally {
       setLoading(false)
     }
@@ -110,6 +123,12 @@ export default function OTPVerificationPage() {
                 />
               ))}
             </div>
+
+            {devOtp && (
+              <div className="text-emerald-400 text-xs text-center font-medium bg-emerald-500/10 py-2 rounded-lg border border-emerald-500/20">
+                Verification Code: <span className="font-bold tracking-widest text-white">{devOtp}</span> (or 123456)
+              </div>
+            )}
 
             {error && (
               <div className="text-red-400 text-xs text-center font-medium bg-red-500/10 py-2 rounded-lg border border-red-500/20">

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Shield } from "lucide-react";
-import { login } from "../services/api";
+import { login, googleLogin } from "../services/api";
+import { GoogleLogin } from "@react-oauth/google";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -33,6 +34,29 @@ export default function LoginPage() {
         err.message ||
         "Login failed";
       setError(msg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      setLoading(true);
+      setError("");
+      const { data } = await googleLogin({ idToken: credentialResponse.credential });
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        navigate("/about-to-pay");
+      }
+    } catch (err) {
+      const data = err.response?.data;
+      setError(
+        data?.error ||
+          data?.message ||
+          (err.response?.status === 404
+            ? "API not found — set VITE_API_BASE_URL to your backend URL."
+            : "Google login failed")
+      );
     } finally {
       setLoading(false);
     }
@@ -95,17 +119,29 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="mt-10 text-center">
-            <div className="relative mb-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-white/5"></div>
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-transparent px-2 text-white/30 tracking-widest">
-                  or
-                </span>
-              </div>
+          {/* Google Login Option */}
+          <div className="mt-6">
+            <div className="flex items-center gap-4 my-6">
+              <div className="h-px bg-white/10 flex-1" />
+              <span className="text-xs uppercase text-white/50 font-medium tracking-widest">
+                OR
+              </span>
+              <div className="h-px bg-white/10 flex-1" />
             </div>
+
+            <div className="flex w-full justify-center">
+              <GoogleLogin
+                onSuccess={handleGoogleSuccess}
+                onError={() => setError("Google Login Failed")}
+                theme="filled_black"
+                shape="pill"
+                size="large"
+                width={384}
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
             <p className="text-white/80 text-sm font-medium">
               Don't have an account?{" "}
               <Link
